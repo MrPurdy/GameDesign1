@@ -6,8 +6,8 @@ func _on_favsub_pressed():
 
 
 func _on_name_pressed():
-	$Label.text = "Cameron Purdy"
+	$Label.text = "Cameron Purdy" 
 
 
 func _on_about_pressed():
-	$Label.text = "I'm 15 I play football, workout, and play variety of video games."
+	$Label.text = "I am 15 I play football, workout, and play variety of video games."
