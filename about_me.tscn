@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgq1y76acx6nl"]
+
+[ext_resource type="Script" path="res://about_me.gd" id="1_7gxs3"]
+
+[sub_resource type="Theme" id="Theme_nlq8o"]
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_s8h30"]
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_o6tat"]
+default_font_size = 40
+
+[node name="AboutMe" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7gxs3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 218.0
+offset_right = 906.0
+offset_bottom = 389.0
+text = "_"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="favsub" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = -216.0
+offset_top = 254.0
+offset_right = 142.0
+offset_bottom = 425.0
+theme = SubResource("Theme_nlq8o")
+text = "Favorite Subject"
+
+[node name="name" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 254.0
+offset_right = 515.0
+offset_bottom = 425.0
+theme = SubResource("Theme_s8h30")
+text = "My Name"
+
+[node name="about" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 254.0
+offset_right = 923.0
+offset_bottom = 425.0
+theme = SubResource("Theme_o6tat")
+text = "About Me"
+
+[connection signal="pressed" from="Label/favsub" to="." method="_on_favsub_pressed"]
+[connection signal="pressed" from="Label/name" to="." method="_on_name_pressed"]
+[connection signal="pressed" from="Label/about" to="." method="_on_about_pressed"]
