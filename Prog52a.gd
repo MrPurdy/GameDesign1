@@ -1,8 +1,6 @@
 extends Control
 
 
-
-
 func _on_btn_calc_pressed():
 	var length = int($LineEdit.text)
 	var width = int($LineEdit2.text)
