@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://ctp4op5vm14c"]
+[gd_scene load_steps=3 format=3 uid="uid://ctp4op5vm14c"]
+
+[ext_resource type="Script" path="res://prog_54b.gd" id="1_6p8kx"]
+
+[sub_resource type="Theme" id="Theme_nli20"]
+default_font_size = 30
 
 [node name="Prog54b" type="Control"]
 layout_mode = 3
@@ -9,20 +14,73 @@ offset_left = -2.0
 offset_right = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6p8kx")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label1" type="Label" parent="."]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 25.0
-offset_right = 505.0
-offset_bottom = 132.0
+offset_left = 509.0
+offset_top = 4.0
+offset_right = 833.0
+offset_bottom = 111.0
+theme = SubResource("Theme_nli20")
+text = "Number 1:"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 217.0
+offset_left = 517.0
+offset_top = 112.0
+offset_right = 805.0
+offset_bottom = 219.0
+theme = SubResource("Theme_nli20")
+text = "Number 2:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 221.0
+offset_right = 821.0
+offset_bottom = 328.0
+theme = SubResource("Theme_nli20")
+text = "Number 3:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 345.0
+offset_right = 782.0
+offset_bottom = 452.0
+theme = SubResource("Theme_nli20")
+text = "Number 4:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblAve" type="Label" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 286.0
+offset_right = 502.0
+offset_bottom = 393.0
+theme = SubResource("Theme_nli20")
+text = "The average of the four numbers is "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblSum" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 20.0
 offset_right = 469.0
-offset_bottom = 309.0
+offset_bottom = 128.0
+theme = SubResource("Theme_nli20")
+text = "The sum of the four numbers is"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 1
@@ -31,52 +89,59 @@ anchor_left = 0.175
 anchor_top = 0.444
 anchor_right = 0.175
 anchor_bottom = 0.444
-offset_left = 532.4
-offset_top = 77.288
-offset_right = 903.4
-offset_bottom = 171.288
+offset_left = 558.4
+offset_top = -273.712
+offset_right = 929.4
+offset_bottom = -179.712
 
 [node name="LineEdit2" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 747.0
-offset_top = 229.0
-offset_right = 1100.0
-offset_bottom = 327.0
+offset_left = 756.0
+offset_top = 127.0
+offset_right = 1109.0
+offset_bottom = 225.0
 
 [node name="LineEdit3" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 749.0
-offset_top = 127.0
-offset_right = 1101.0
-offset_bottom = 215.0
+offset_left = 764.0
+offset_top = 244.0
+offset_right = 1116.0
+offset_bottom = 332.0
 
 [node name="LineEdit4" type="LineEdit" parent="."]
 layout_mode = 0
-offset_left = 753.0
-offset_top = 17.0
-offset_right = 1101.0
-offset_bottom = 106.0
+offset_left = 734.0
+offset_top = 359.0
+offset_right = 1082.0
+offset_bottom = 448.0
 
-[node name="Button" type="Button" parent="."]
+[node name="btnCalc" type="Button" parent="."]
 layout_mode = 0
-offset_left = 862.0
-offset_top = 532.0
-offset_right = 1138.0
-offset_bottom = 646.0
+offset_left = 16.0
+offset_top = 523.0
+offset_right = 292.0
+offset_bottom = 637.0
+text = "Calculate"
 
-[node name="Button3" type="Button" parent="."]
+[node name="btnClear" type="Button" parent="."]
 layout_mode = 0
 offset_left = 404.0
 offset_top = 528.0
 offset_right = 678.0
 offset_bottom = 642.0
+text = "Clear"
 
-[node name="Button2" type="Button" parent="."]
+[node name="btnExit" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.066
 anchor_right = 0.066
-offset_left = -66.032
-offset_top = 524.0
-offset_right = 199.968
-offset_bottom = 634.0
+offset_left = 803.968
+offset_top = 531.0
+offset_right = 1069.97
+offset_bottom = 641.0
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
