@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://c06xbc06kqgxa"]
+
+[sub_resource type="Theme" id="Theme_vggki"]
+default_font_size = 40
+
+[node name="Prog54c" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Radius" type="Label" parent="."]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 3.0
+offset_right = 667.0
+offset_bottom = 100.0
+theme = SubResource("Theme_vggki")
+text = "Radius:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblArea" type="Label" parent="."]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 116.0
+offset_right = 665.0
+offset_bottom = 213.0
+theme = SubResource("Theme_vggki")
+text = "Area:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblCir" type="Label" parent="."]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 260.0
+offset_right = 665.0
+offset_bottom = 357.0
+theme = SubResource("Theme_vggki")
+text = "Circumference:"
+horizontal_alignment = 1
+vertical_alignment = 1
