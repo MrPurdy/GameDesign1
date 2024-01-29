@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=3 uid="uid://bonp1lu32ljgu"]
+
+[ext_resource type="Script" path="res://Prog82a.gd" id="1_p2hda"]
+
+[sub_resource type="Theme" id="Theme_udk2b"]
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_5ddnm"]
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_4xoeu"]
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_6ctq4"]
+default_font_size = 40
+
+[node name="Prog82a" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p2hda")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 19.0
+offset_right = 434.0
+offset_bottom = 86.0
+theme = SubResource("Theme_udk2b")
+text = "Enter speed limit:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 108.0
+offset_right = 440.0
+offset_bottom = 175.0
+theme = SubResource("Theme_udk2b")
+text = "Enter vehicle speed:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 247.0
+offset_right = 949.0
+offset_bottom = 411.0
+theme = SubResource("Theme_udk2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="txtLimit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 14.0
+offset_right = 809.0
+offset_bottom = 85.0
+
+[node name="txtSpeed" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 474.0
+offset_top = 104.0
+offset_right = 822.0
+offset_bottom = 191.0
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 503.0
+offset_right = 276.0
+offset_bottom = 639.0
+theme = SubResource("Theme_5ddnm")
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 498.0
+offset_right = 708.0
+offset_bottom = 634.0
+theme = SubResource("Theme_4xoeu")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 813.0
+offset_top = 500.0
+offset_right = 1091.0
+offset_bottom = 636.0
+theme = SubResource("Theme_6ctq4")
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]

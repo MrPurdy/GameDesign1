@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://c06xbc06kqgxa"]
+[gd_scene load_steps=4 format=3 uid="uid://c06xbc06kqgxa"]
+
+[ext_resource type="Script" path="res://prog_54c.gd" id="1_yxjcy"]
 
 [sub_resource type="Theme" id="Theme_vggki"]
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_0s3rd"]
 default_font_size = 40
 
 [node name="Prog54c" type="Control"]
@@ -8,10 +13,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -3.0
+offset_right = -3.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_yxjcy")
 
-[node name="Radius" type="Label" parent="."]
+[node name="lblRad" type="Label" parent="."]
 layout_mode = 0
 offset_left = 264.0
 offset_top = 3.0
@@ -43,3 +51,41 @@ theme = SubResource("Theme_vggki")
 text = "Circumference:"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="txtRad" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 551.0
+offset_top = 20.0
+offset_right = 953.0
+offset_bottom = 100.0
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 545.0
+offset_right = 264.0
+offset_bottom = 648.0
+theme = SubResource("Theme_0s3rd")
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 557.0
+offset_right = 665.0
+offset_bottom = 647.0
+theme = SubResource("Theme_0s3rd")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 935.0
+offset_top = 551.0
+offset_right = 1160.0
+offset_bottom = 641.0
+theme = SubResource("Theme_0s3rd")
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
