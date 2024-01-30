@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://daf11nigs2j5t"]
+[gd_scene load_steps=4 format=3 uid="uid://daf11nigs2j5t"]
+
+[ext_resource type="Script" path="res://prog_76a.gd" id="1_pesix"]
 
 [sub_resource type="Theme" id="Theme_e3gsc"]
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_c8xfu"]
 default_font_size = 40
 
 [node name="Prog76a" type="Control"]
@@ -8,8 +13,11 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pesix")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -24,10 +32,94 @@ vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 69.0
-offset_top = 110.0
-offset_right = 759.0
-offset_bottom = 181.0
+offset_left = 432.0
+offset_top = 117.0
+offset_right = 779.0
+offset_bottom = 233.0
 theme = SubResource("Theme_e3gsc")
+text = "Multiply that by 9:"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 318.0
+offset_right = 840.0
+offset_bottom = 434.0
+theme = SubResource("Theme_e3gsc")
+text = "Multiply your product by 12345679:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ans1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 754.0
+offset_top = 257.0
+offset_right = 1147.0
+offset_bottom = 328.0
+theme = SubResource("Theme_e3gsc")
+text = "Answer:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Ans2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 448.0
+offset_right = 1157.0
+offset_bottom = 519.0
+theme = SubResource("Theme_e3gsc")
+text = "Final Answer: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="num1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 811.0
+offset_top = 16.0
+offset_right = 1101.0
+offset_bottom = 111.0
+theme = SubResource("Theme_c8xfu")
+
+[node name="num2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 137.0
+offset_right = 1094.0
+offset_bottom = 232.0
+theme = SubResource("Theme_c8xfu")
+
+[node name="num3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 845.0
+offset_top = 331.0
+offset_right = 1135.0
+offset_bottom = 426.0
+theme = SubResource("Theme_c8xfu")
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 521.0
+offset_right = 329.0
+offset_bottom = 634.0
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 518.0
+offset_right = 712.0
+offset_bottom = 636.0
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 823.0
+offset_top = 523.0
+offset_right = 1116.0
+offset_bottom = 636.0
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
