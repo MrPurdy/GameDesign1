@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvr7phdafsi4y"]
+
+[ext_resource type="Script" path="res://LP4-3.gd" id="1_n36wd"]
+
+[node name="LP4-3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n36wd")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 45.0
+offset_right = 597.0
+offset_bottom = 97.0
+text = "Enter # of eggs purchased:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 132.0
+offset_right = 1134.0
+offset_bottom = 535.0
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 49.0
+offset_right = 887.0
+offset_bottom = 105.0
+
+[node name="btnCalc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 522.0
+offset_right = 160.0
+offset_bottom = 600.0
+text = "Calculate"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 519.0
+offset_right = 604.0
+offset_bottom = 597.0
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 986.0
+offset_top = 514.0
+offset_right = 1136.0
+offset_bottom = 592.0
+text = "Exit"
+
+[connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
