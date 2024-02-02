@@ -15,7 +15,7 @@ func _on_btn_calc_pressed():
 		price = 0.40
 	elif  eggs >= 11:
 		price = 0.35
-		else:
+	else:
 		$lblOut.text = "Invalid # of Eggs"
 		return
 	cost = price * eggs
