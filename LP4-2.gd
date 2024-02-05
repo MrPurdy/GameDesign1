@@ -9,9 +9,26 @@ func _on_btn_calc_pressed():
 	var height = int($lineHeight.text)
 	var width = int($lineWidth.text)
 	
-	if  weight >= 42:
-		else if length >= 100000:
-		else if width >= 100000:
-		else if height >= 100000:
-		else 
-		p.innerHTML = "Package is okay.";
+	if  weight > 0 and weight <= 27:
+		weight 
+	else:
+		$lblOutkg.text = "Package is too heavy"
+		return
+	
+	if  width > 0 and width <= 100:
+		length 
+	else:
+		$lblOutln.text = "Package is too large"
+		return
+	
+	if  width > 0 and width <= 100:
+		width 
+	else:
+		$lblOutwi.text = "Package is to large"
+		return
+		
+	if  height > 0 and height <= 100:
+		height 
+	else:
+		$lblOuthe.text = "Package is too large"
+		return
