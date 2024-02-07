@@ -1,43 +1,43 @@
-[gd_scene load_steps=2 format=3 uid="uid://d34mtvr37f6vj"]
+[gd_scene load_steps=2 format=3 uid="uid://cdq6pkxuqct0u"]
 
-[ext_resource type="Script" path="res://prog_122h.gd" id="1_dt3ap"]
+[ext_resource type="Script" path="res://Prog152a.gd" id="1_rgnei"]
 
-[node name="Prog122h" type="Control"]
+[node name="Prog152a" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_dt3ap")
+script = ExtResource("1_rgnei")
 
 [node name="ItemList" type="ItemList" parent="."]
 layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 464.0
+offset_right = 1151.0
+offset_bottom = 488.0
 
 [node name="btnCalc" type="Button" parent="."]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 521.0
-offset_right = 198.0
-offset_bottom = 645.0
+offset_left = 1.0
+offset_top = 548.0
+offset_right = 177.0
+offset_bottom = 649.0
 text = "Calculate"
 
 [node name="btnClear" type="Button" parent="."]
 layout_mode = 0
-offset_left = 460.0
-offset_top = 526.0
-offset_right = 655.0
-offset_bottom = 650.0
+offset_left = 452.0
+offset_top = 543.0
+offset_right = 628.0
+offset_bottom = 644.0
 text = "Clear"
 
 [node name="btnExit" type="Button" parent="."]
 layout_mode = 0
-offset_left = 959.0
-offset_top = 524.0
-offset_right = 1154.0
-offset_bottom = 648.0
+offset_left = 973.0
+offset_top = 546.0
+offset_right = 1149.0
+offset_bottom = 647.0
 text = "Exit"
 
 [connection signal="pressed" from="btnCalc" to="." method="_on_btn_calc_pressed"]
