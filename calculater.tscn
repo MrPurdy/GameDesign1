@@ -1,0 +1,165 @@
+[gd_scene load_steps=4 format=3 uid="uid://u7n1brvi55fa"]
+
+[ext_resource type="Script" path="res://Calculater.gd" id="1_0ctg0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_baroy"]
+line_spacing = 21.495
+font_size = 36
+
+[sub_resource type="Theme" id="Theme_dx0o2"]
+default_font_size = 30
+
+[node name="Calculater" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ctg0")
+
+[node name="lblNum1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 57.0
+offset_right = 281.0
+offset_bottom = 105.0
+text = "Number 1:"
+label_settings = SubResource("LabelSettings_baroy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblOperation" type="Label" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 189.0
+offset_right = 269.0
+offset_bottom = 260.0
+text = "Operation:"
+label_settings = SubResource("LabelSettings_baroy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblNum2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 340.0
+offset_right = 276.0
+offset_bottom = 411.0
+text = "Number 2:"
+label_settings = SubResource("LabelSettings_baroy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblResult" type="Label" parent="."]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 475.0
+offset_right = 237.0
+offset_bottom = 546.0
+text = "Result:"
+label_settings = SubResource("LabelSettings_baroy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="txtNum1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 52.0
+offset_right = 665.0
+offset_bottom = 132.0
+
+[node name="txtNum2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 338.0
+offset_right = 665.0
+offset_bottom = 418.0
+
+[node name="txtResult" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 471.0
+offset_right = 651.0
+offset_bottom = 551.0
+
+[node name="btnAdd" type="Button" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 43.0
+offset_right = 902.0
+offset_bottom = 118.0
+theme = SubResource("Theme_dx0o2")
+text = "+"
+
+[node name="btnSub" type="Button" parent="."]
+layout_mode = 0
+offset_left = 923.0
+offset_top = 40.0
+offset_right = 1026.0
+offset_bottom = 115.0
+theme = SubResource("Theme_dx0o2")
+text = "-"
+
+[node name="btnMul" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1036.0
+offset_top = 41.0
+offset_right = 1139.0
+offset_bottom = 116.0
+theme = SubResource("Theme_dx0o2")
+text = "*"
+
+[node name="btnPow" type="Button" parent="."]
+layout_mode = 0
+offset_left = 795.0
+offset_top = 131.0
+offset_right = 898.0
+offset_bottom = 206.0
+theme = SubResource("Theme_dx0o2")
+text = "**"
+
+[node name="btnDiv" type="Button" parent="."]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 134.0
+offset_right = 1023.0
+offset_bottom = 209.0
+theme = SubResource("Theme_dx0o2")
+text = "/"
+
+[node name="btnMod" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1037.0
+offset_top = 132.0
+offset_right = 1140.0
+offset_bottom = 207.0
+theme = SubResource("Theme_dx0o2")
+text = "MOD"
+
+[node name="btnClear" type="Button" parent="."]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 415.0
+offset_right = 1123.0
+offset_bottom = 490.0
+theme = SubResource("Theme_dx0o2")
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 846.0
+offset_top = 526.0
+offset_right = 1128.0
+offset_bottom = 601.0
+theme = SubResource("Theme_dx0o2")
+text = "Exit"
+
+[connection signal="pressed" from="btnAdd" to="." method="_on_btn_add_pressed"]
+[connection signal="pressed" from="btnSub" to="." method="_on_btn_sub_pressed"]
+[connection signal="pressed" from="btnMul" to="." method="_on_btn_mul_pressed"]
+[connection signal="pressed" from="btnPow" to="." method="_on_btn_pow_pressed"]
+[connection signal="pressed" from="btnDiv" to="." method="_on_btn_div_pressed"]
+[connection signal="pressed" from="btnMod" to="." method="_on_btn_mod_pressed"]
+[connection signal="pressed" from="btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]

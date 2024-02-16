@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmb08vodco2hh"]
+
+[ext_resource type="Script" path="res://Scoreboard.gd" id="1_quxtc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5new6"]
+line_spacing = 30.0
+
+[node name="Scoreboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_quxtc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 208.0
+offset_bottom = 98.0
+text = "Modify points (add/sub):"
+label_settings = SubResource("LabelSettings_5new6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lblOut" type="Label" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 159.0
+offset_right = 1142.0
+offset_bottom = 475.0
+text = "0"
+label_settings = SubResource("LabelSettings_5new6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 24.0
+offset_right = 555.0
+offset_bottom = 84.0
+placeholder_text = "add"
+
+[node name="btnUpdate" type="Button" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 530.0
+offset_right = 262.0
+offset_bottom = 642.0
+text = "Update "
+
+[node name="btnReset" type="Button" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 532.0
+offset_right = 670.0
+offset_bottom = 644.0
+text = "Reset"
+
+[node name="btnExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 867.0
+offset_top = 532.0
+offset_right = 1123.0
+offset_bottom = 644.0
+text = "Exit"
+
+[connection signal="pressed" from="btnUpdate" to="." method="_on_btn_update_pressed"]
+[connection signal="pressed" from="btnReset" to="." method="_on_btn_reset_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]
