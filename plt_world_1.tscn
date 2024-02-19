@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=3 uid="uid://beitn6osqcve4"]
+
+[ext_resource type="Script" path="res://plt_world1.gd" id="1_edgg1"]
+[ext_resource type="Script" path="res://plt_player.gd" id="2_stnxs"]
+[ext_resource type="Texture2D" uid="uid://crsi1eh2t6vc2" path="res://icon.svg" id="2_u7a0v"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jrp1a"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_d8xhm"]
+a = Vector2(117, -1)
+b = Vector2(1, -1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0m07j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_84fbu"]
+radius = 16.0
+height = 48.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q260q"]
+size = Vector2(34, 184)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jwlgw"]
+
+[node name="plt_world1" type="Node2D"]
+script = ExtResource("1_edgg1")
+
+[node name="world" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world"]
+position = Vector2(4, -2)
+polygon = PackedVector2Array(-4, -1, 80, 363, 198, 498, 395, 408, 594, 524, 731, 429, 854, 308, 997, 257, 695, 589, 769, 629, 935, 465, 1017, 327, 1053, 303, 1341, 131, 1562, 241, 1604, 160, 1730, 261, 1885, 585, 2754, 317, 3495, 21, 5377, -513, 5630, 827, 7262, 327, 7824, -53, 8726, 310, 9345, -174, 9493, 122, 10919, 713, 11497, 2435, 15413, 727, 35088, -13541, 76858, -13541, 11497, 2072, 9318, 794, 8228, 700, 5383, 907, 3986, 593, 762, 653, -1, 649)
+
+[node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]
+texture = SubResource("PlaceholderTexture2D_jrp1a")
+
+[node name="startplatform" type="StaticBody2D" parent="."]
+position = Vector2(342, 393)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="startplatform"]
+position = Vector2(-1, 1)
+shape = SubResource("SegmentShape2D_d8xhm")
+
+[node name="Sprite2D" type="Sprite2D" parent="startplatform/CollisionShape2D"]
+position = Vector2(57.625, -1)
+scale = Vector2(120.75, -1)
+texture = SubResource("PlaceholderTexture2D_0m07j")
+
+[node name="plt_player" type="CharacterBody2D" parent="."]
+position = Vector2(2, 0)
+script = ExtResource("2_stnxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="plt_player"]
+position = Vector2(395, 368)
+scale = Vector2(0.25, 0.375)
+texture = ExtResource("2_u7a0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plt_player"]
+position = Vector2(396, 369)
+shape = SubResource("CapsuleShape2D_84fbu")
+
+[node name="Camera2D" type="Camera2D" parent="plt_player"]
+position = Vector2(396, 369)
+zoom = Vector2(3, 3)
+
+[node name="Interact" type="RigidBody2D" parent="."]
+position = Vector2(712, 120)
+input_pickable = true
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
+position = Vector2(30, -31)
+shape = SubResource("RectangleShape2D_q260q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Interact"]
+position = Vector2(30.0001, -30)
+scale = Vector2(-33.7949, 184.971)
+texture = SubResource("PlaceholderTexture2D_jwlgw")
+
+[connection signal="mouse_entered" from="Interact" to="." method="_on_interact_mouse_entered"]
