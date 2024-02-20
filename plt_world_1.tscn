@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://beitn6osqcve4"]
+[gd_scene load_steps=11 format=3 uid="uid://beitn6osqcve4"]
 
 [ext_resource type="Script" path="res://plt_world1.gd" id="1_edgg1"]
 [ext_resource type="Script" path="res://plt_player.gd" id="2_stnxs"]
 [ext_resource type="Texture2D" uid="uid://crsi1eh2t6vc2" path="res://icon.svg" id="2_u7a0v"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jrp1a"]
+[ext_resource type="Script" path="res://plt_enemy.gd" id="4_q62kt"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_d8xhm"]
 a = Vector2(117, -1)
@@ -21,6 +20,9 @@ size = Vector2(34, 184)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jwlgw"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv0eg"]
+size = Vector2(16, 17)
+
 [node name="plt_world1" type="Node2D"]
 script = ExtResource("1_edgg1")
 
@@ -28,10 +30,10 @@ script = ExtResource("1_edgg1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world"]
 position = Vector2(4, -2)
-polygon = PackedVector2Array(-4, -1, 80, 363, 198, 498, 395, 408, 594, 524, 731, 429, 854, 308, 997, 257, 695, 589, 769, 629, 935, 465, 1017, 327, 1053, 303, 1341, 131, 1562, 241, 1604, 160, 1730, 261, 1885, 585, 2754, 317, 3495, 21, 5377, -513, 5630, 827, 7262, 327, 7824, -53, 8726, 310, 9345, -174, 9493, 122, 10919, 713, 11497, 2435, 15413, 727, 35088, -13541, 76858, -13541, 11497, 2072, 9318, 794, 8228, 700, 5383, 907, 3986, 593, 762, 653, -1, 649)
+polygon = PackedVector2Array(-4, -1, 80, 363, 395, 408, 594, 524, 731, 429, 854, 308, 997, 257, 695, 589, 769, 629, 935, 465, 1017, 327, 1053, 303, 1341, 131, 1562, 241, 1604, 160, 1730, 261, 1885, 585, 2754, 317, 3495, 21, 5377, -513, 5630, 827, 7262, 327, 7824, -53, 8726, 310, 9345, -174, 9493, 122, 10919, 713, 11497, 2435, 15413, 727, 35088, -13541, 76858, -13541, 11497, 2072, 9318, 794, 8228, 700, 5383, 907, 3986, 593, 762, 653, -1, 649)
+one_way_collision_margin = 0.0
 
 [node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]
-texture = SubResource("PlaceholderTexture2D_jrp1a")
 
 [node name="startplatform" type="StaticBody2D" parent="."]
 position = Vector2(342, 393)
@@ -63,7 +65,7 @@ position = Vector2(396, 369)
 zoom = Vector2(3, 3)
 
 [node name="Interact" type="RigidBody2D" parent="."]
-position = Vector2(712, 120)
+position = Vector2(969, 193)
 input_pickable = true
 freeze = true
 
@@ -76,4 +78,48 @@ position = Vector2(30.0001, -30)
 scale = Vector2(-33.7949, 184.971)
 texture = SubResource("PlaceholderTexture2D_jwlgw")
 
+[node name="Dragable" type="RigidBody2D" parent="."]
+position = Vector2(13, -10)
+
+[node name="ColorRect" type="ColorRect" parent="Dragable"]
+offset_left = 899.0
+offset_top = 233.0
+offset_right = 947.0
+offset_bottom = 263.0
+
+[node name="Button" type="Button" parent="Dragable/ColorRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 44.0
+offset_bottom = 30.0
+focus_mode = 0
+keep_pressed_outside = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dragable"]
+
+[node name="plt_enemy" type="RigidBody2D" parent="."]
+modulate = Color(0.784314, 0.211765, 1, 1)
+position = Vector2(12852, 709)
+mass = 1801.75
+inertia = 1801.75
+max_contacts_reported = 1
+script = ExtResource("4_q62kt")
+
+[node name="Sprite2D" type="Sprite2D" parent="plt_enemy"]
+modulate = Color(0.784314, 0.211765, 1, 1)
+position = Vector2(1, -1.5)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("2_u7a0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plt_enemy"]
+position = Vector2(1, -1.5)
+shape = SubResource("RectangleShape2D_bv0eg")
+
+[node name="Timer" type="Timer" parent="plt_enemy"]
+
 [connection signal="mouse_entered" from="Interact" to="." method="_on_interact_mouse_entered"]
+[connection signal="button_down" from="Dragable/ColorRect/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Dragable/ColorRect/Button" to="." method="_on_button_button_up"]
+[connection signal="body_entered" from="plt_enemy" to="." method="_on_plt_enemy_body_entered"]
+[connection signal="body_entered" from="plt_enemy" to="plt_enemy" method="_on_body_entered"]
+[connection signal="timeout" from="plt_enemy/Timer" to="plt_enemy" method="_on_timer_timeout"]
