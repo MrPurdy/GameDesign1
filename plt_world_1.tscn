@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://beitn6osqcve4"]
+[gd_scene load_steps=21 format=3 uid="uid://beitn6osqcve4"]
 
 [ext_resource type="Script" path="res://plt_world1.gd" id="1_edgg1"]
 [ext_resource type="Script" path="res://plt_player.gd" id="2_stnxs"]
 [ext_resource type="Texture2D" uid="uid://crsi1eh2t6vc2" path="res://icon.svg" id="2_u7a0v"]
+[ext_resource type="Texture2D" uid="uid://4blb1mwukqk" path="res://assets/sprites/characters.png" id="4_42y5h"]
 [ext_resource type="Script" path="res://plt_enemy.gd" id="4_q62kt"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_d8xhm"]
@@ -14,6 +15,80 @@ b = Vector2(1, -1)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_84fbu"]
 radius = 16.0
 height = 48.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84u6t"]
+atlas = ExtResource("4_42y5h")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en887"]
+atlas = ExtResource("4_42y5h")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys63s"]
+atlas = ExtResource("4_42y5h")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2qsy"]
+atlas = ExtResource("4_42y5h")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hu6f"]
+atlas = ExtResource("4_42y5h")
+region = Rect2(448, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44g0u"]
+atlas = ExtResource("4_42y5h")
+region = Rect2(480, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhigk"]
+atlas = ExtResource("4_42y5h")
+region = Rect2(512, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8y363"]
+atlas = ExtResource("4_42y5h")
+region = Rect2(544, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kxccr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84u6t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_en887")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_ys63s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2qsy")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hu6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44g0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhigk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8y363")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q260q"]
 size = Vector2(34, 184)
@@ -34,6 +109,7 @@ polygon = PackedVector2Array(-4, -1, 80, 363, 395, 408, 594, 524, 731, 429, 854,
 one_way_collision_margin = 0.0
 
 [node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]
+polygon = PackedVector2Array(3, -1, -4, 641, 755, 658, 772, 621, 385, 406, 77, 362)
 
 [node name="startplatform" type="StaticBody2D" parent="."]
 position = Vector2(342, 393)
@@ -52,6 +128,7 @@ position = Vector2(2, 0)
 script = ExtResource("2_stnxs")
 
 [node name="Sprite2D" type="Sprite2D" parent="plt_player"]
+visible = false
 position = Vector2(395, 368)
 scale = Vector2(0.25, 0.375)
 texture = ExtResource("2_u7a0v")
@@ -63,6 +140,14 @@ shape = SubResource("CapsuleShape2D_84fbu")
 [node name="Camera2D" type="Camera2D" parent="plt_player"]
 position = Vector2(396, 369)
 zoom = Vector2(3, 3)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="plt_player"]
+texture_filter = 1
+position = Vector2(396, 361)
+scale = Vector2(1.4375, 1.9375)
+sprite_frames = SubResource("SpriteFrames_kxccr")
+animation = &"jump"
+frame_progress = 0.540876
 
 [node name="Interact" type="RigidBody2D" parent="."]
 position = Vector2(969, 193)
@@ -79,7 +164,7 @@ scale = Vector2(-33.7949, 184.971)
 texture = SubResource("PlaceholderTexture2D_jwlgw")
 
 [node name="Dragable" type="RigidBody2D" parent="."]
-position = Vector2(13, -10)
+position = Vector2(18, -43)
 
 [node name="ColorRect" type="ColorRect" parent="Dragable"]
 offset_left = 899.0
