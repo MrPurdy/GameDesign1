@@ -1,9 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://beitn6osqcve4"]
+[gd_scene load_steps=10 format=3 uid="uid://beitn6osqcve4"]
 
 [ext_resource type="Script" path="res://plt_world1.gd" id="1_edgg1"]
-[ext_resource type="Script" path="res://plt_player.gd" id="2_stnxs"]
+[ext_resource type="PackedScene" uid="uid://d2gvxhi6s6ma8" path="res://plt_player.tscn" id="2_e20ny"]
 [ext_resource type="Texture2D" uid="uid://crsi1eh2t6vc2" path="res://icon.svg" id="2_u7a0v"]
-[ext_resource type="Texture2D" uid="uid://4blb1mwukqk" path="res://assets/sprites/characters.png" id="4_42y5h"]
 [ext_resource type="Script" path="res://plt_enemy.gd" id="4_q62kt"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_d8xhm"]
@@ -11,84 +10,6 @@ a = Vector2(117, -1)
 b = Vector2(1, -1)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0m07j"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_84fbu"]
-radius = 16.0
-height = 48.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_84u6t"]
-atlas = ExtResource("4_42y5h")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_en887"]
-atlas = ExtResource("4_42y5h")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ys63s"]
-atlas = ExtResource("4_42y5h")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f2qsy"]
-atlas = ExtResource("4_42y5h")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5hu6f"]
-atlas = ExtResource("4_42y5h")
-region = Rect2(448, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_44g0u"]
-atlas = ExtResource("4_42y5h")
-region = Rect2(480, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fhigk"]
-atlas = ExtResource("4_42y5h")
-region = Rect2(512, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8y363"]
-atlas = ExtResource("4_42y5h")
-region = Rect2(544, 64, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_kxccr"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_84u6t")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_en887")
-}, {
-"duration": 5.0,
-"texture": SubResource("AtlasTexture_ys63s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f2qsy")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5hu6f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_44g0u")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fhigk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8y363")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 5.0
-}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q260q"]
 size = Vector2(34, 184)
@@ -105,11 +26,12 @@ script = ExtResource("1_edgg1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world"]
 position = Vector2(4, -2)
-polygon = PackedVector2Array(-4, -1, 80, 363, 395, 408, 594, 524, 731, 429, 854, 308, 997, 257, 695, 589, 769, 629, 935, 465, 1017, 327, 1053, 303, 1341, 131, 1562, 241, 1604, 160, 1730, 261, 1885, 585, 2754, 317, 3495, 21, 5377, -513, 5630, 827, 7262, 327, 7824, -53, 8726, 310, 9345, -174, 9493, 122, 10919, 713, 11497, 2435, 15413, 727, 35088, -13541, 76858, -13541, 11497, 2072, 9318, 794, 8228, 700, 5383, 907, 3986, 593, 762, 653, -1, 649)
+polygon = PackedVector2Array(-4, -1, 80, 363, 395, 408, 594, 524, 731, 429, 854, 308, 997, 257, 703, 589, 769, 629, 935, 465, 1017, 327, 1053, 303, 1341, 131, 1562, 241, 1604, 160, 1730, 261, 1885, 585, 2754, 317, 3495, 21, 5377, -513, 5630, 827, 7262, 327, 7824, -53, 8726, 310, 9345, -174, 9493, 122, 10919, 713, 11874, 776, 15413, 727, 35088, -13541, 76858, -13541, 11497, 2072, 9318, 794, 8228, 700, 5383, 907, 3986, 593, 762, 653, -1, 649)
 one_way_collision_margin = 0.0
 
 [node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]
-polygon = PackedVector2Array(3, -1, -4, 641, 755, 658, 772, 621, 385, 406, 77, 362)
+color = Color(0.129412, 0.231373, 0.8, 1)
+polygon = PackedVector2Array(1, 29, 2, 648, 431.024, 641.957, 3978, 592, 5386, 907, 8223, 697, 9320, 795, 76735, -13556, 34917, -13470, 15402, 718, 10914, 686, 9490, 118, 9330, -186, 8698, 310, 7834, -58, 7274, 318, 5610, 822, 5610, 814, 5354, -506, 1896, 579, 1716, 246, 1602, 161, 1563, 242, 1340, 127, 1010, 333, 933, 466, 772, 626, 704, 589, 995, 261, 857, 308, 728, 431, 592, 520, 392, 409, 79, 363)
 
 [node name="startplatform" type="StaticBody2D" parent="."]
 position = Vector2(342, 393)
@@ -123,34 +45,11 @@ position = Vector2(57.625, -1)
 scale = Vector2(120.75, -1)
 texture = SubResource("PlaceholderTexture2D_0m07j")
 
-[node name="plt_player" type="CharacterBody2D" parent="."]
-position = Vector2(2, 0)
-script = ExtResource("2_stnxs")
-
-[node name="Sprite2D" type="Sprite2D" parent="plt_player"]
-visible = false
-position = Vector2(395, 368)
-scale = Vector2(0.25, 0.375)
-texture = ExtResource("2_u7a0v")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plt_player"]
-position = Vector2(396, 369)
-shape = SubResource("CapsuleShape2D_84fbu")
-
-[node name="Camera2D" type="Camera2D" parent="plt_player"]
-position = Vector2(396, 369)
-zoom = Vector2(3, 3)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="plt_player"]
-texture_filter = 1
-position = Vector2(396, 361)
-scale = Vector2(1.4375, 1.9375)
-sprite_frames = SubResource("SpriteFrames_kxccr")
-animation = &"jump"
-frame_progress = 0.540876
+[node name="plt_player" parent="." instance=ExtResource("2_e20ny")]
+position = Vector2(11747, 281)
 
 [node name="Interact" type="RigidBody2D" parent="."]
-position = Vector2(969, 193)
+position = Vector2(960, 190)
 input_pickable = true
 freeze = true
 
@@ -164,17 +63,19 @@ scale = Vector2(-33.7949, 184.971)
 texture = SubResource("PlaceholderTexture2D_jwlgw")
 
 [node name="Dragable" type="RigidBody2D" parent="."]
-position = Vector2(18, -43)
+position = Vector2(62, -46)
 
 [node name="ColorRect" type="ColorRect" parent="Dragable"]
-offset_left = 899.0
-offset_top = 233.0
-offset_right = 947.0
-offset_bottom = 263.0
+offset_left = 772.0
+offset_top = 87.0
+offset_right = 820.0
+offset_bottom = 117.0
 
 [node name="Button" type="Button" parent="Dragable/ColorRect"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
+offset_left = 6.0
+offset_top = -6.0
 offset_right = 44.0
 offset_bottom = 30.0
 focus_mode = 0
