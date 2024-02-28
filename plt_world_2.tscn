@@ -316,7 +316,7 @@ sources/0 = SubResource("TileSetAtlasSource_omyil")
 
 [node name="plt_World2" type="Node2D"]
 
-[node name="plt_player" parent="." instance=ExtResource("1_etiyu")]
+[node name="plt_player" parent="." groups=["Player"] instance=ExtResource("1_etiyu")]
 position = Vector2(-379, -217)
 
 [node name="TileMap" type="TileMap" parent="."]

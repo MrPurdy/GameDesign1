@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://beitn6osqcve4"]
+[gd_scene load_steps=11 format=3 uid="uid://beitn6osqcve4"]
 
 [ext_resource type="Script" path="res://plt_world1.gd" id="1_edgg1"]
 [ext_resource type="PackedScene" uid="uid://d2gvxhi6s6ma8" path="res://plt_player.tscn" id="2_e20ny"]
 [ext_resource type="Texture2D" uid="uid://crsi1eh2t6vc2" path="res://icon.svg" id="2_u7a0v"]
 [ext_resource type="Script" path="res://plt_enemy.gd" id="4_q62kt"]
+[ext_resource type="PackedScene" uid="uid://dmcspmnujspn4" path="res://change_lvl.tscn" id="5_d7ri2"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_d8xhm"]
 a = Vector2(117, -1)
@@ -45,8 +46,8 @@ position = Vector2(57.625, -1)
 scale = Vector2(120.75, -1)
 texture = SubResource("PlaceholderTexture2D_0m07j")
 
-[node name="plt_player" parent="." instance=ExtResource("2_e20ny")]
-position = Vector2(11747, 281)
+[node name="plt_player" parent="." groups=["Player"] instance=ExtResource("2_e20ny")]
+position = Vector2(75519, -14047)
 
 [node name="Interact" type="RigidBody2D" parent="."]
 position = Vector2(960, 190)
@@ -102,6 +103,9 @@ position = Vector2(1, -1.5)
 shape = SubResource("RectangleShape2D_bv0eg")
 
 [node name="Timer" type="Timer" parent="plt_enemy"]
+
+[node name="change_lvl" parent="." instance=ExtResource("5_d7ri2")]
+position = Vector2(76765, -13701)
 
 [connection signal="mouse_entered" from="Interact" to="." method="_on_interact_mouse_entered"]
 [connection signal="button_down" from="Dragable/ColorRect/Button" to="." method="_on_button_button_down"]

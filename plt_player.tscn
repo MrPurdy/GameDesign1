@@ -100,7 +100,7 @@ shape = SubResource("CapsuleShape2D_84fbu")
 position = Vector2(396, 369)
 zoom = Vector2(3, 3)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player"]]
 texture_filter = 1
 position = Vector2(396, 361)
 scale = Vector2(1.4375, 1.9375)
