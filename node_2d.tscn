@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc6s17vujalcv"]
+
+[ext_resource type="PackedScene" uid="uid://dmcspmnujspn4" path="res://change_lvl.tscn" id="1_fuofh"]
+
+[node name="change_lvl3" type="Node2D"]
+
+[node name="change_lvl" parent="." instance=ExtResource("1_fuofh")]
+position = Vector2(201, 6)
+next_level = "plt_world_3.tscn"

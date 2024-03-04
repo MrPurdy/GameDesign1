@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://change_lvl.gd" id="1_e5kk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pm26b"]
-size = Vector2(102, 161)
+size = Vector2(45, 92)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ge6ah"]
 
@@ -13,12 +13,12 @@ script = ExtResource("1_e5kk0")
 next_level = "plt_world_2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(44, 75.5)
+position = Vector2(72.5, 110)
 shape = SubResource("RectangleShape2D_pm26b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(45.25, 76.75)
-scale = Vector2(91.5, 154.5)
+position = Vector2(72, 110)
+scale = Vector2(38, 88)
 texture = SubResource("PlaceholderTexture2D_ge6ah")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

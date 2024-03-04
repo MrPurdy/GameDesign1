@@ -27,12 +27,12 @@ script = ExtResource("1_edgg1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world"]
 position = Vector2(4, -2)
-polygon = PackedVector2Array(-4, -1, 80, 363, 395, 408, 594, 524, 731, 429, 854, 308, 997, 257, 703, 589, 769, 629, 935, 465, 1017, 327, 1053, 303, 1341, 131, 1562, 241, 1604, 160, 1730, 261, 1885, 585, 2754, 317, 3495, 21, 5377, -513, 5630, 827, 7262, 327, 7824, -53, 8726, 310, 9345, -174, 9493, 122, 10919, 713, 11874, 776, 15413, 727, 35088, -13541, 76858, -13541, 11497, 2072, 9318, 794, 8228, 700, 5383, 907, 3986, 593, 762, 653, -1, 649)
+polygon = PackedVector2Array(-4, -1, 80, 363, 395, 408, 594, 524, 731, 429, 854, 308, 997, 257, 703, 589, 769, 629, 935, 465, 1017, 327, 1053, 303, 1341, 131, 1562, 241, 1604, 160, 1730, 261, 1885, 585, 2754, 317, 3495, 21, 5377, -513, 5630, 827, 7262, 327, 7824, -53, 8726, 310, 9345, -174, 9493, 122, 10919, 713, 11874, 776, 19389, 850, 11497, 2072, 9318, 794, 8228, 700, 5383, 907, 3986, 593, 762, 653, -1, 649)
 one_way_collision_margin = 0.0
 
 [node name="Polygon2D" type="Polygon2D" parent="world/CollisionPolygon2D"]
 color = Color(0.129412, 0.231373, 0.8, 1)
-polygon = PackedVector2Array(1, 29, 2, 648, 431.024, 641.957, 3978, 592, 5386, 907, 8223, 697, 9320, 795, 76735, -13556, 34917, -13470, 15402, 718, 10914, 686, 9490, 118, 9330, -186, 8698, 310, 7834, -58, 7274, 318, 5610, 822, 5610, 814, 5354, -506, 1896, 579, 1716, 246, 1602, 161, 1563, 242, 1340, 127, 1010, 333, 933, 466, 772, 626, 704, 589, 995, 261, 857, 308, 728, 431, 592, 520, 392, 409, 79, 363)
+polygon = PackedVector2Array(1, 29, 2, 648, 431.024, 641.957, 3978, 592, 5386, 907, 8223, 697, 9320, 795, 52011, -6074, 33821, -6558, 15402, 718, 10914, 686, 9490, 118, 9330, -186, 8698, 310, 7834, -58, 7274, 318, 5610, 822, 5610, 814, 5354, -506, 1896, 579, 1716, 246, 1602, 161, 1563, 242, 1340, 127, 1010, 333, 933, 466, 772, 626, 704, 589, 995, 261, 857, 308, 728, 431, 592, 520, 392, 409, 79, 363)
 
 [node name="startplatform" type="StaticBody2D" parent="."]
 position = Vector2(342, 393)
@@ -47,7 +47,7 @@ scale = Vector2(120.75, -1)
 texture = SubResource("PlaceholderTexture2D_0m07j")
 
 [node name="plt_player" parent="." groups=["Player"] instance=ExtResource("2_e20ny")]
-position = Vector2(75519, -14047)
+position = Vector2(5, 5)
 
 [node name="Interact" type="RigidBody2D" parent="."]
 position = Vector2(960, 190)
@@ -105,7 +105,7 @@ shape = SubResource("RectangleShape2D_bv0eg")
 [node name="Timer" type="Timer" parent="plt_enemy"]
 
 [node name="change_lvl" parent="." instance=ExtResource("5_d7ri2")]
-position = Vector2(76765, -13701)
+position = Vector2(19219, 690)
 
 [connection signal="mouse_entered" from="Interact" to="." method="_on_interact_mouse_entered"]
 [connection signal="button_down" from="Dragable/ColorRect/Button" to="." method="_on_button_button_down"]
