@@ -8,7 +8,7 @@ size = Vector2(45, 92)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ge6ah"]
 
 [node name="change_lvl" type="Area2D"]
-position = Vector2(222, 0)
+position = Vector2(214, 217)
 script = ExtResource("1_e5kk0")
 next_level = "plt_world_2.tscn"
 

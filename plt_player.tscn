@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://4blb1mwukqk" path="res://assets/sprites/characters.png" id="3_el3fr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_84fbu"]
+radius = 8.0
 height = 36.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84u6t"]
@@ -101,8 +102,8 @@ zoom = Vector2(3, 3)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player"]]
 texture_filter = 1
-position = Vector2(396, 366)
-scale = Vector2(0.90625, 1.25)
+position = Vector2(396, 362)
+scale = Vector2(0.90625, 1.48438)
 sprite_frames = SubResource("SpriteFrames_kxccr")
 animation = &"jump"
 frame_progress = 0.540876
