@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://beitn6osqcve4"]
+[gd_scene load_steps=12 format=3 uid="uid://beitn6osqcve4"]
 
 [ext_resource type="Script" path="res://plt_world1.gd" id="1_edgg1"]
 [ext_resource type="PackedScene" uid="uid://d2gvxhi6s6ma8" path="res://plt_player.tscn" id="2_e20ny"]
@@ -16,6 +16,9 @@ b = Vector2(1, -1)
 size = Vector2(34, 184)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jwlgw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whnyq"]
+size = Vector2(47, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bv0eg"]
 size = Vector2(16, 17)
@@ -50,7 +53,7 @@ texture = SubResource("PlaceholderTexture2D_0m07j")
 position = Vector2(5, 5)
 
 [node name="Interact" type="RigidBody2D" parent="."]
-position = Vector2(960, 190)
+position = Vector2(962, 192)
 input_pickable = true
 freeze = true
 
@@ -59,7 +62,7 @@ position = Vector2(30, -31)
 shape = SubResource("RectangleShape2D_q260q")
 
 [node name="Sprite2D" type="Sprite2D" parent="Interact"]
-position = Vector2(30.0001, -30)
+position = Vector2(29, -29)
 scale = Vector2(-33.7949, 184.971)
 texture = SubResource("PlaceholderTexture2D_jwlgw")
 
@@ -67,22 +70,26 @@ texture = SubResource("PlaceholderTexture2D_jwlgw")
 position = Vector2(62, -46)
 
 [node name="ColorRect" type="ColorRect" parent="Dragable"]
-offset_left = 772.0
-offset_top = 87.0
-offset_right = 820.0
-offset_bottom = 117.0
+offset_left = 837.0
+offset_top = 237.0
+offset_right = 885.0
+offset_bottom = 267.0
 
 [node name="Button" type="Button" parent="Dragable/ColorRect"]
 modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 6.0
-offset_top = -6.0
-offset_right = 44.0
-offset_bottom = 30.0
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -3.0
+offset_right = 42.0
+offset_bottom = 18.0
 focus_mode = 0
 keep_pressed_outside = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dragable"]
+position = Vector2(861, 252)
+shape = SubResource("RectangleShape2D_whnyq")
 
 [node name="plt_enemy" type="RigidBody2D" parent="."]
 modulate = Color(0.784314, 0.211765, 1, 1)

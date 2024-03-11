@@ -8,8 +8,19 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var gravity_on = true
 
+var menu_scene = preload("res://my_gui.tscn")
+var menu_instance = null
+
+func _ready():
+	menu_instance = menu_scene.instantiate()
+	get_tree().get_root().add_child.call_deferred(menu_instance)
+	menu_instance.hide()
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		menu_instance.show()
+		get_tree().paused
+	
 	# Add the gravity.
 	if not is_on_floor() and gravity_on:
 		velocity.y += gravity * delta
