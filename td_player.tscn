@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://bb5qbjg04hi4f"]
+
+[ext_resource type="Script" path="res://td_player.gd" id="1_kld1t"]
+[ext_resource type="Texture2D" uid="uid://cmv8sm7i8r3r7" path="res://assets/sprites/zelda_like/character.png" id="1_sutf0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfmf2"]
+atlas = ExtResource("1_sutf0")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6oug"]
+atlas = ExtResource("1_sutf0")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svm7t"]
+atlas = ExtResource("1_sutf0")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6oj0s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfmf2")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6oug")
+}],
+"loop": true,
+"name": &"idle_side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svm7t")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rsluv"]
+radius = 7.0
+height = 22.0
+
+[node name="td_player" type="CharacterBody2D"]
+script = ExtResource("1_kld1t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6oj0s")
+animation = &"idle_down"
+autoplay = "idle_down"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_rsluv")
