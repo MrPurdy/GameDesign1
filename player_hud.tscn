@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://0b3xnkw6c386"]
+
+[ext_resource type="Script" path="res://PlayerHud.gd" id="1_togj6"]
+[ext_resource type="Texture2D" uid="uid://b43ng5k8gtpup" path="res://assets/sprites/zelda_like/objects.png" id="2_6oe3t"]
+
+[node name="PlayerHud" type="CanvasLayer" groups=["HUD"]]
+script = ExtResource("1_togj6")
+
+[node name="PlayerHealth" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 582.0
+offset_bottom = 155.0
+
+[node name="Hearts" type="Sprite2D" parent="PlayerHealth"]
+position = Vector2(97, 80.5395)
+scale = Vector2(9.375, 9.00494)
+texture = ExtResource("2_6oe3t")
+hframes = 33
+vframes = 20
+frame = 8
