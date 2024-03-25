@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5o0lmnvtpaqo"]
+[gd_scene load_steps=9 format=3 uid="uid://b5o0lmnvtpaqo"]
 
 [ext_resource type="Texture2D" uid="uid://b405ivinx2it4" path="res://assets/sprites/zelda_like/Overworld.png" id="1_koixu"]
 [ext_resource type="PackedScene" uid="uid://bb5qbjg04hi4f" path="res://td_player.tscn" id="2_6fl8w"]
 [ext_resource type="PackedScene" uid="uid://0b3xnkw6c386" path="res://player_hud.tscn" id="3_jr6ev"]
+[ext_resource type="PackedScene" uid="uid://da351vduefud1" path="res://entitys/Coin.tscn" id="4_dxqqi"]
+[ext_resource type="PackedScene" uid="uid://dwyes7glueqa5" path="res://entitys/mini_heart.tscn" id="5_s0ioi"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ixvus"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -3330,3 +3332,9 @@ position = Vector2(-41, 103)
 
 [node name="PlayerHud" parent="." instance=ExtResource("3_jr6ev")]
 visible = false
+
+[node name="Coin" parent="." instance=ExtResource("4_dxqqi")]
+position = Vector2(146, 144)
+
+[node name="mini_heart" parent="." instance=ExtResource("5_s0ioi")]
+position = Vector2(-96, 134)

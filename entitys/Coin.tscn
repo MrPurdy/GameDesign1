@@ -1,25 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpgnx6thclweb"]
+[gd_scene load_steps=9 format=3 uid="uid://da351vduefud1"]
 
-[ext_resource type="Script" path="res://entitys/BaseItem.gd" id="1_sqkyy"]
-[ext_resource type="Texture2D" uid="uid://b43ng5k8gtpup" path="res://assets/sprites/zelda_like/objects.png" id="2_xyvyr"]
+[ext_resource type="Script" path="res://entitys/Coin.gd" id="1_tmwwm"]
+[ext_resource type="Texture2D" uid="uid://b43ng5k8gtpup" path="res://assets/sprites/zelda_like/objects.png" id="2_r7jvj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmd8m"]
-atlas = ExtResource("2_xyvyr")
+atlas = ExtResource("2_r7jvj")
 region = Rect2(0, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q27ld"]
-atlas = ExtResource("2_xyvyr")
+atlas = ExtResource("2_r7jvj")
 region = Rect2(16, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vhfb4"]
-atlas = ExtResource("2_xyvyr")
+atlas = ExtResource("2_r7jvj")
 region = Rect2(32, 64, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1ifo"]
-atlas = ExtResource("2_xyvyr")
+atlas = ExtResource("2_r7jvj")
 region = Rect2(48, 64, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_n85gg"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_dqihw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -39,20 +39,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_fc1eh"]
-radius = 14.3178
+[sub_resource type="CircleShape2D" id="CircleShape2D_goj6b"]
+radius = 24.1868
 
-[node name="BaseItem" type="Node2D" groups=["Player"]]
-script = ExtResource("1_sqkyy")
+[node name="Coin" type="Node2D"]
+script = ExtResource("1_tmwwm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -0.999996)
-scale = Vector2(1.625, 1.75)
-sprite_frames = SubResource("SpriteFrames_n85gg")
-frame_progress = 0.685203
+position = Vector2(3, 3.8147e-06)
+scale = Vector2(3.375, 3.5)
+sprite_frames = SubResource("SpriteFrames_dqihw")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, -3)
-shape = SubResource("CircleShape2D_fc1eh")
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_goj6b")
