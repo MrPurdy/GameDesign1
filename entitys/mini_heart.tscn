@@ -40,15 +40,15 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hpqp4"]
-radius = 20.2485
+radius = 8.0
 
 [node name="mini_heart" type="Node2D"]
 position = Vector2(7, 2)
 script = ExtResource("1_b7olk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, 4.00002)
-scale = Vector2(2.5, 2.875)
+position = Vector2(1, 2)
+scale = Vector2(1.375, 1.375)
 sprite_frames = SubResource("SpriteFrames_1a0nh")
 frame_progress = 0.5645
 

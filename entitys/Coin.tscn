@@ -40,14 +40,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_goj6b"]
-radius = 24.1868
+radius = 10.0499
 
 [node name="Coin" type="Node2D"]
 script = ExtResource("1_tmwwm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3, 3.8147e-06)
-scale = Vector2(3.375, 3.5)
+position = Vector2(1, -1)
+scale = Vector2(1.6875, 1.625)
 sprite_frames = SubResource("SpriteFrames_dqihw")
 
 [node name="Area2D" type="Area2D" parent="."]
