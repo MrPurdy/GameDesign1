@@ -370,6 +370,7 @@ height = 22.0
 script = ExtResource("1_kld1t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_6oj0s")
 animation = &"swipe_charge"
 autoplay = "idle_down"

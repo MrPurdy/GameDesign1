@@ -1,4 +1,4 @@
-class_name BaseItem extends Node2D
+extends Node2D
 var value
 var flicker_state = false
 var flicker_start_time = 10.0

@@ -12,7 +12,7 @@ anchors_preset = 0
 offset_right = 582.0
 offset_bottom = 155.0
 
-[node name="Hearts" type="Sprite2D" parent="PlayerHealth"]
+[node name="hearts" type="Sprite2D" parent="PlayerHealth"]
 position = Vector2(40, 33)
 scale = Vector2(4.3125, 4.09869)
 texture = ExtResource("2_6oe3t")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxweeiha1quea"]
+
+[ext_resource type="Script" path="res://player_hud2.gd" id="1_8xu6p"]
+[ext_resource type="Texture2D" uid="uid://b43ng5k8gtpup" path="res://assets/sprites/zelda_like/objects.png" id="2_fd1qs"]
+
+[node name="player_hud2" type="CanvasLayer"]
+script = ExtResource("1_8xu6p")
+
+[node name="PlayerCoins" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 582.0
+offset_bottom = 155.0
+
+[node name="Coins" type="Sprite2D" parent="PlayerCoins"]
+position = Vector2(40, 33)
+scale = Vector2(4.3125, 4.09869)
+texture = ExtResource("2_fd1qs")
+hframes = 33
+vframes = 20
+frame = 166
