@@ -2,6 +2,7 @@ extends CanvasLayer
 
 @onready var player = get_tree().get_first_node_in_group("Player")
 @onready var hearts = $PlayerHealth/Hearts
+@onready var coins = $PlayerMoney/Coins
 
 const HEART_ROW_SIZE = 10
 const HEART_OFFSET = 16
@@ -21,11 +22,8 @@ func draw_hearts():
 	for i in range(int(player.data.max_health) / 20):
 		create_heart()  # 1 heart per 20 hp
 
-func _ready():
-	draw_hearts()
 
 func _process(delta):
-	$Money/Coins.text = "%03d" % player.data.money
 	var p_health = player.data.health
 	var full_hearts = floor(p_health / 20)
 	var remainder = int(p_health) % 20
