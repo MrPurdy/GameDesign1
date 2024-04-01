@@ -64,13 +64,34 @@ func charged_attack():
 		await $AnimatedSprite2D.animation_finished
 	data.state = STATES.IDLE
 	pass
+	
 func pickup_money(value):
 	data.money += value
 
 func pickup_health(value):
 	data.health += value
 	data.health = clamp(data.health, 0, data.max_health)
-	
+
+signal health_depleted
+
+func take_damage(dmg):
+	if damage_lock == 0.0:
+		data.health -= dmg
+		data.state = STATES.DAMAGED
+		damage_lock = 0.5
+		animation_lock = dmg * 0.005
+		# Damage Shader
+		if data.health <= 0:
+			data.state = STATES.DEAD
+			# Death animation
+			await get_tree().create_timer(0.5).timeout
+			health_depleted.emit()
+		else: 
+			# Play damage sound
+			pass
+		
+	pass
+
 func _ready():
 	p_HUD.show()
 	menu_instance = menu_scene.instantiate()
