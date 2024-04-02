@@ -14,5 +14,5 @@ func _process(delta):
 		if self.overlaps_body(enemy):
 			enemy.take_damage(damage, self)
 			enemy.inertia = (enemy.global_position-self.global_position) \
-							.normalizsed() * knockback
+							.normalized() * knockback
 	pass
