@@ -13,7 +13,7 @@ func remove():
 	value = 0
 	queue_free()
 
-func interact(player):
+func interact(_player):
 	remove()
 
 func _init(default_value: int = 1):

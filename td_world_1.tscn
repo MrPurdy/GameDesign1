@@ -3341,4 +3341,19 @@ position = Vector2(146, 144)
 position = Vector2(-96, 134)
 
 [node name="td_enemy" parent="." instance=ExtResource("6_ateky")]
-position = Vector2(37, 151)
+position = Vector2(284, 155)
+
+[node name="td_enemy5" parent="." instance=ExtResource("6_ateky")]
+position = Vector2(265, 325)
+
+[node name="td_enemy6" parent="." instance=ExtResource("6_ateky")]
+position = Vector2(641, 157)
+
+[node name="td_enemy4" parent="." instance=ExtResource("6_ateky")]
+position = Vector2(622, 337)
+
+[node name="td_enemy2" parent="." instance=ExtResource("6_ateky")]
+position = Vector2(58, 245)
+
+[node name="td_enemy3" parent="." instance=ExtResource("6_ateky")]
+position = Vector2(-81, 208)

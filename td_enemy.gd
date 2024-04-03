@@ -53,13 +53,36 @@ signal  recovered
 @onready var anim_player = $AnimatedSprite2D
 
 func turn_toward_player_location(location: Vector2):
-	# Todo
-	pass
+	var dir_to_player = (location - self.global_position).normalized()
+	velocity = dir_to_player * (SPEED * 2)
+	var closest_angle = INF
+	var closest_state = STATES.IDLE
+	for i in range(1, 5):
+		var state_dir = state_directions[i]
+		var angle_dif = abs(state_dir.angle_to(dir_to_player))
+		if angle_dif < closest_angle:
+			closest_angle = angle_dif
+			closest_state = STATES.values()[i]
+	AI_STATE = closest_state
 
 func take_damage(dmg, attacker=null):
-	# Todo
+	if damage_lock == 0.0:
+		AI_STATE = STATES.DAMAGED
+		HEALTH -= dmg
+		damage_lock = 0.2
+		animation_lock = 0.2
+		# Damage shader
+		if HEALTH <= 0:
+			# Drop item
+			# Death sound
+			queue_free()
+		else:
+			if attacker != null:
+				var loc = attacker.global_position
+				await recovered
+				turn_toward_player_location(loc)
 	pass
-	
+
 func _physics_process(delta):
 	animation_lock = max(animation_lock - delta, 0.0)
 	damage_lock = max(damage_lock - delta, 0.0)
@@ -71,7 +94,10 @@ func _physics_process(delta):
 		raycastR.target_position = \
 			raydir.rotated(deg_to_rad(45)).normalized() * vision_distance
 	if animation_lock == 0.0:
-		# recover from damage
+		if AI_STATE == STATES.DAMAGED:
+			AI_STATE = STATES.IDLE
+			recovered.emit()
+			
 		# damage player
 		
 		ai_timer = clamp(ai_timer - delta, 0.0, ai_timer_max)

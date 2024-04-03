@@ -23,7 +23,7 @@ func draw_hearts():
 		create_heart()  # 1 heart per 20 hp
 
 
-func _process(delta):
+func _process(_delta):
 	var p_health = player.data.health
 	var full_hearts = floor(p_health / 20)
 	var remainder = int(p_health) % 20
