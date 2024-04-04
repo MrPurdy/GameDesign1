@@ -3356,4 +3356,4 @@ position = Vector2(622, 337)
 position = Vector2(58, 245)
 
 [node name="td_enemy3" parent="." instance=ExtResource("6_ateky")]
-position = Vector2(-81, 208)
+position = Vector2(-54, 140)
