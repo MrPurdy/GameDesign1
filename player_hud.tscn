@@ -20,15 +20,16 @@ position = Vector2(40.25, 32.8948)
 scale = Vector2(4.28125, 4.11185)
 texture = ExtResource("2_6oe3t")
 hframes = 33
-vframes = 20
-frame = 8
+vframes = 21
+frame = 4
 
 [node name="PlayerMoney" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_top = 4.0
-offset_right = 582.0
-offset_bottom = 159.0
+offset_left = -1.0
+offset_top = 9.0
+offset_right = 581.0
+offset_bottom = 164.0
 
 [node name="Coins" type="Sprite2D" parent="PlayerMoney"]
 position = Vector2(36, 111)
