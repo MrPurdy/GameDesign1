@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5o0lmnvtpaqo"]
+[gd_scene load_steps=11 format=3 uid="uid://b5o0lmnvtpaqo"]
 
 [ext_resource type="Texture2D" uid="uid://b405ivinx2it4" path="res://assets/sprites/zelda_like/Overworld.png" id="1_koixu"]
 [ext_resource type="PackedScene" uid="uid://bb5qbjg04hi4f" path="res://td_player.tscn" id="2_6fl8w"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://da351vduefud1" path="res://entitys/Coin.tscn" id="4_dxqqi"]
 [ext_resource type="PackedScene" uid="uid://dwyes7glueqa5" path="res://entitys/mini_heart.tscn" id="5_s0ioi"]
 [ext_resource type="PackedScene" uid="uid://daefwxrv5ekuy" path="res://td_enemy.tscn" id="6_ateky"]
+[ext_resource type="AudioStream" uid="uid://fsdm28mngrj2" path="res://assets/sounds/overworld.mp3" id="7_lab4q"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ixvus"]
 vertices = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -3357,3 +3358,9 @@ position = Vector2(58, 245)
 
 [node name="td_enemy3" parent="." instance=ExtResource("6_ateky")]
 position = Vector2(-54, 140)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_lab4q")
+volume_db = -8.506
+pitch_scale = 3.25
+autoplay = true
