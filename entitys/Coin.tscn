@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://da351vduefud1"]
+[gd_scene load_steps=10 format=3 uid="uid://da351vduefud1"]
 
 [ext_resource type="Script" path="res://entitys/Coin.gd" id="1_tmwwm"]
 [ext_resource type="Texture2D" uid="uid://b43ng5k8gtpup" path="res://assets/sprites/zelda_like/objects.png" id="2_r7jvj"]
+[ext_resource type="AudioStream" uid="uid://dmr18kvotxece" path="res://assets/sounds/pickupCoin.wav" id="3_8eaud"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tmd8m"]
 atlas = ExtResource("2_r7jvj")
@@ -55,3 +56,6 @@ sprite_frames = SubResource("SpriteFrames_dqihw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_goj6b")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8eaud")
