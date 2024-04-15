@@ -3367,11 +3367,11 @@ pitch_scale = 2.06
 autoplay = true
 
 [node name="change_lvl" parent="." instance=ExtResource("8_y4v8f")]
-position = Vector2(260, -167)
-next_level = "td_world_2"
+position = Vector2(261, -161)
+next_level = "td_world_2.tscn"
 
 [node name="CollisionShape2D" parent="change_lvl" index="0"]
-position = Vector2(67, 140.5)
+position = Vector2(67, 126.25)
 
 [node name="Sprite2D" parent="change_lvl" index="1"]
 visible = false
