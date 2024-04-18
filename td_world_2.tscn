@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dohetqqn5nros" path="res://assets/sprites/zelda_like/cave.png" id="2_ucowd"]
 [ext_resource type="PackedScene" uid="uid://daefwxrv5ekuy" path="res://td_enemy.tscn" id="3_wnoqw"]
 [ext_resource type="PackedScene" uid="uid://dmcspmnujspn4" path="res://change_lvl.tscn" id="6_by6gu"]
-[ext_resource type="AudioStream" uid="uid://bcax1t826gwk" path="res://assets/sounds/Fighting.wav" id="7_4ugj2"]
+[ext_resource type="AudioStream" uid="uid://bo1g5ajhlh4fu" path="res://assets/sounds/fighting.mp3" id="7_8vdyr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e235m"]
 texture = ExtResource("1_i6y7o")
@@ -1027,7 +1027,7 @@ position = Vector2(-267, 178)
 visible = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_4ugj2")
+stream = ExtResource("7_8vdyr")
 volume_db = 6.893
 pitch_scale = 2.05
 autoplay = true
