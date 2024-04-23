@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dwyes7glueqa5"]
 
-[ext_resource type="Script" path="res://entitys/mini_heart.gd" id="1_b7olk"]
+[ext_resource type="Script" path="res://entitys/items/mini_heart.gd" id="1_b7olk"]
 [ext_resource type="Texture2D" uid="uid://b43ng5k8gtpup" path="res://assets/sprites/zelda_like/objects.png" id="2_5wtah"]
 [ext_resource type="AudioStream" uid="uid://caacyeftbach1" path="res://assets/sounds/powerUp.wav" id="3_sbh8g"]
 

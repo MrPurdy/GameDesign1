@@ -55,8 +55,8 @@ signal  recovered
 
 var drops = ["drop_coin", "drop_heart"]
 
-var coin_scene = preload("res://entitys/Coin.tscn")
-var heart_scene = preload("res://entitys/mini_heart.tscn")
+var coin_scene = preload("res://entitys/items/Coin.tscn")
+var heart_scene = preload("res://entitys/items/mini_heart.tscn")
 var damage_shader = preload("res://assets/shaders/take_damage.tres")
 var death_sound = preload("res://assets/sounds/enemydeath.wav")
 

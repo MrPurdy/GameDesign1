@@ -1,5 +1,9 @@
 extends Node2D
+
+
 var value
+var bounce = true
+
 var flicker_state = false
 var flicker_start_time = 10.0
 var flicker_interval = 0.1

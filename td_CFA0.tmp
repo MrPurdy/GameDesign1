@@ -3379,9 +3379,6 @@ visible = false
 
 [node name="SmallChest" parent="." instance=ExtResource("9_t413a")]
 position = Vector2(-103, 172)
-contents = {
-"coin1": 1,
-"coin2": 10
-}
+contents = {}
 
 [editable path="change_lvl"]

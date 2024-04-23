@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://da351vduefud1"]
 
-[ext_resource type="Script" path="res://entitys/Coin.gd" id="1_tmwwm"]
+[ext_resource type="Script" path="res://entitys/items/Coin.gd" id="1_tmwwm"]
 [ext_resource type="Texture2D" uid="uid://b43ng5k8gtpup" path="res://assets/sprites/zelda_like/objects.png" id="2_r7jvj"]
 [ext_resource type="AudioStream" uid="uid://dmr18kvotxece" path="res://assets/sounds/pickupCoin.wav" id="3_8eaud"]
 
