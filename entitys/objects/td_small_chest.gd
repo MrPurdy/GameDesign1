@@ -5,8 +5,8 @@ extends Node2D
 @export var contents: Dictionary = {} # {"coin1": 5, "coin2": 10, "miniheart1": -1 }
 var OPEN_STATE = false
 var regex = RegEx.new()
-
 var bounce = true
+
 
 func in_range(player) -> bool:
 	return player.data.state != player.STATES.DEAD and \
@@ -54,7 +54,7 @@ func drop_item(item_name, value, player):
 	
 	
 func _ready():
-	$AnimatedSprite2d.play()
+	.play()
 	if bounce:
 		var tween = get_tree().create_tween()
 		var bounce_height = Vector2(0, -3)
