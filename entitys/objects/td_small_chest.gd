@@ -6,7 +6,7 @@ extends Node2D
 var OPEN_STATE = false
 var regex = RegEx.new()
 
-
+var bounce = true
 
 func in_range(player) -> bool:
 	return player.data.state != player.STATES.DEAD and \
@@ -56,8 +56,16 @@ func drop_item(item_name, value, player):
 func _ready():
 	$AnimatedSprite2d.play()
 	if bounce:
-		var tween = get_tree().create_tween()\
-		var bounce_height = Vector2
+		var tween = get_tree().create_tween()
+		var bounce_height = Vector2(0, -3)
+		tween.set_trans(Tween.TRANS_BOUNCE)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.tween_property($AnimatedSprite2D, "global position",
+							self.global_position + bounce_height, 0.1)
+		tween.play()
+		tween.set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property($AnimatedSprite2D, "global_position", self.global_position, 0.1)
+		tween.play()
 	
 func _process(_delta):
 	pass
