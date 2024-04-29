@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://dj6cmk1enwomq"]
+[gd_scene load_steps=7 format=3 uid="uid://dj6cmk1enwomq"]
 
 [ext_resource type="Script" path="res://CookieClicker.gd" id="1_ejxwd"]
-[ext_resource type="Texture2D" uid="uid://bvgy3k70ofgso" path="res://assets/Final/cookie.png" id="2_33rl5"]
+[ext_resource type="Texture2D" uid="uid://dknmg0y7g8fvb" path="res://assets/Final/cookie.png" id="2_33rl5"]
+[ext_resource type="Texture2D" uid="uid://dpds73tedjud5" path="res://assets/Final/cursor.png" id="3_d7vil"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fsgdr"]
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_uvc8t"]
 font_size = 112
+
+[sub_resource type="Theme" id="Theme_j52of"]
+default_font_size = 112
 
 [node name="CookieClicker" type="Node2D"]
 script = ExtResource("1_ejxwd")
@@ -24,7 +28,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BigCookie" type="Sprite2D" parent="."]
-position = Vector2(147, 229)
+position = Vector2(122, 175)
 scale = Vector2(0.274687, 0.250156)
 texture = ExtResource("2_33rl5")
 
@@ -39,11 +43,31 @@ label_settings = SubResource("LabelSettings_uvc8t")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="BigCookie"]
-visible = false
-offset_left = -397.0
-offset_top = -400.0
-offset_right = 422.0
-offset_bottom = 404.0
+[node name="CookieClicked" type="Button" parent="BigCookie"]
+show_behind_parent = true
+visibility_layer = 0
+offset_left = -411.377
+offset_top = -399.751
+offset_right = 407.623
+offset_bottom = 404.249
 
-[connection signal="pressed" from="BigCookie/Button" to="." method="_on_button_pressed"]
+[node name="BigCursor" type="Sprite2D" parent="."]
+position = Vector2(865, 89)
+scale = Vector2(0.227728, 0.219727)
+texture = ExtResource("3_d7vil")
+
+[node name="BuyCursor" type="Button" parent="BigCursor"]
+offset_left = 303.0
+offset_top = -86.0
+offset_right = 1212.0
+offset_bottom = 246.0
+theme = SubResource("Theme_j52of")
+text = "Cost: 15 Cookies"
+
+[node name="Timer" type="Timer" parent="BigCursor"]
+autostart = true
+
+[connection signal="pressed" from="BigCookie/CookieClicked" to="." method="_on_cookie_clicked_pressed"]
+[connection signal="pressed" from="BigCookie/CookieClicked" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BigCursor/BuyCursor" to="." method="_on_buy_cursor_pressed"]
+[connection signal="timeout" from="BigCursor/Timer" to="." method="_on_timer_timeout"]
