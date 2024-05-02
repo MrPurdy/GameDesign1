@@ -1,0 +1,144 @@
+[gd_scene load_steps=12 format=3 uid="uid://d2jt3f3nf3eym"]
+
+[ext_resource type="Script" path="res://CookieClicker.gd" id="1_tt1jk"]
+[ext_resource type="Texture2D" uid="uid://dknmg0y7g8fvb" path="res://assets/Final/cookie.png" id="2_ji5l6"]
+[ext_resource type="Texture2D" uid="uid://dpds73tedjud5" path="res://assets/Final/cursor.png" id="3_n8kgn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fsgdr"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_uvc8t"]
+font_size = 112
+
+[sub_resource type="Theme" id="Theme_j52of"]
+default_font_size = 112
+
+[sub_resource type="Theme" id="Theme_78ked"]
+default_font_size = 210
+
+[sub_resource type="LabelSettings" id="LabelSettings_i0np0"]
+font_size = 111
+
+[sub_resource type="LabelSettings" id="LabelSettings_imeh2"]
+font_size = 36
+
+[sub_resource type="Theme" id="Theme_qxx7u"]
+default_font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_0p5jx"]
+font_size = 26
+
+[node name="CookieTapper2" type="Node2D"]
+script = ExtResource("1_tt1jk")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 3.0
+offset_top = -16.0
+offset_right = 283.0
+offset_bottom = 54.0
+text = "Your Bakery!
+"
+label_settings = SubResource("LabelSettings_fsgdr")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BigCookie" type="Sprite2D" parent="."]
+position = Vector2(122, 175)
+scale = Vector2(0.274687, 0.250156)
+texture = ExtResource("2_ji5l6")
+
+[node name="lblCookies" type="Label" parent="BigCookie"]
+offset_left = -316.724
+offset_top = -627.608
+offset_right = 346.276
+offset_bottom = -371.608
+text = "0 Cookies
+"
+label_settings = SubResource("LabelSettings_uvc8t")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CookieTapped" type="Button" parent="BigCookie"]
+show_behind_parent = true
+visibility_layer = 0
+offset_left = -411.377
+offset_top = -399.751
+offset_right = 407.623
+offset_bottom = 404.249
+metadata/_edit_use_anchors_ = true
+
+[node name="BigCursor" type="Sprite2D" parent="."]
+position = Vector2(822, 61)
+scale = Vector2(0.227728, 0.219727)
+texture = ExtResource("3_n8kgn")
+
+[node name="BuyCursor" type="Button" parent="BigCursor"]
+offset_left = 553.291
+offset_top = -45.511
+offset_right = 1438.29
+offset_bottom = 236.489
+theme = SubResource("Theme_j52of")
+metadata/_edit_use_anchors_ = true
+
+[node name="mnyCursors" type="Label" parent="BigCursor"]
+offset_left = 21.9561
+offset_top = -54.6132
+offset_right = 662.956
+offset_bottom = 235.387
+theme = SubResource("Theme_78ked")
+text = "0"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="costC" type="Label" parent="BigCursor"]
+offset_left = 566.465
+offset_top = -40.9599
+offset_right = 1435.47
+offset_bottom = 209.04
+text = "Cost: 15 Cookies"
+label_settings = SubResource("LabelSettings_i0np0")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="lblrebirth" type="Label" parent="."]
+offset_left = 406.0
+offset_top = 3.0
+offset_right = 618.0
+offset_bottom = 63.0
+text = "Rebirths: 0"
+label_settings = SubResource("LabelSettings_imeh2")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Buyrebirth" type="Button" parent="lblrebirth"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 54.0
+offset_right = 209.0
+offset_bottom = 104.0
+theme = SubResource("Theme_qxx7u")
+metadata/_edit_use_anchors_ = true
+
+[node name="costR" type="Label" parent="lblrebirth"]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 51.0
+offset_right = 229.0
+offset_bottom = 99.0
+text = "Cookies: 1000000"
+label_settings = SubResource("LabelSettings_0p5jx")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed" flags=18]
+[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="BigCursor/BuyCursor" to="." method="_on_buy_cursor_pressed" flags=18]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout" flags=18]
+[connection signal="pressed" from="lblrebirth/Buyrebirth" to="." method="_on_buyrebirth_pressed" flags=18]
