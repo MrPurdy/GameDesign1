@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dj6cmk1enwomq"]
+[gd_scene load_steps=12 format=3 uid="uid://dj6cmk1enwomq"]
 
 [ext_resource type="Script" path="res://CookieClicker.gd" id="1_ejxwd"]
 [ext_resource type="Texture2D" uid="uid://dknmg0y7g8fvb" path="res://assets/Final/cookie.png" id="2_33rl5"]
@@ -19,6 +19,15 @@ default_font_size = 210
 [sub_resource type="LabelSettings" id="LabelSettings_i0np0"]
 font_size = 111
 
+[sub_resource type="LabelSettings" id="LabelSettings_imeh2"]
+font_size = 36
+
+[sub_resource type="Theme" id="Theme_qxx7u"]
+default_font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_0p5jx"]
+font_size = 26
+
 [node name="CookieTapper" type="Node2D"]
 script = ExtResource("1_ejxwd")
 
@@ -32,6 +41,7 @@ text = "Your Bakery!
 label_settings = SubResource("LabelSettings_fsgdr")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="BigCookie" type="Sprite2D" parent="."]
 position = Vector2(122, 175)
@@ -48,6 +58,7 @@ text = "0 Cookies
 label_settings = SubResource("LabelSettings_uvc8t")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="CookieTapped" type="Button" parent="BigCookie"]
 show_behind_parent = true
@@ -56,6 +67,7 @@ offset_left = -411.377
 offset_top = -399.751
 offset_right = 407.623
 offset_bottom = 404.249
+metadata/_edit_use_anchors_ = true
 
 [node name="BigCursor" type="Sprite2D" parent="."]
 position = Vector2(822, 61)
@@ -68,6 +80,7 @@ offset_top = -45.511
 offset_right = 1438.29
 offset_bottom = 236.489
 theme = SubResource("Theme_j52of")
+metadata/_edit_use_anchors_ = true
 
 [node name="mnyCursors" type="Label" parent="BigCursor"]
 offset_left = 21.9561
@@ -77,6 +90,7 @@ offset_bottom = 235.387
 theme = SubResource("Theme_78ked")
 text = "0"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="costC" type="Label" parent="BigCursor"]
 offset_left = 566.465
@@ -87,10 +101,44 @@ text = "Cost: 15 Cookies"
 label_settings = SubResource("LabelSettings_i0np0")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Timer" type="Timer" parent="."]
 
-[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_button_pressed"]
+[node name="lblrebirth" type="Label" parent="."]
+offset_left = 406.0
+offset_top = 3.0
+offset_right = 618.0
+offset_bottom = 63.0
+text = "Rebirths: 0"
+label_settings = SubResource("LabelSettings_imeh2")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Buyrebirth" type="Button" parent="lblrebirth"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 54.0
+offset_right = 209.0
+offset_bottom = 104.0
+theme = SubResource("Theme_qxx7u")
+metadata/_edit_use_anchors_ = true
+
+[node name="costR" type="Label" parent="lblrebirth"]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 51.0
+offset_right = 229.0
+offset_bottom = 99.0
+text = "Cookies: 1000000"
+label_settings = SubResource("LabelSettings_0p5jx")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed"]
+[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="BigCursor/BuyCursor" to="." method="_on_buy_cursor_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="lblrebirth/Buyrebirth" to="." method="_on_buyrebirth_pressed"]
