@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://p43ct6wxeo2b"]
-
-[ext_resource type="PackedScene" uid="uid://dj6cmk1enwomq" path="res://cookie_clicker.tscn" id="1_mmrpg"]
-
-[node name="1stRebirth" type="Node2D"]
-
-[node name="CookieTapper" parent="." instance=ExtResource("1_mmrpg")]

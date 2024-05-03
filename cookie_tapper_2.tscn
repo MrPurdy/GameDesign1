@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://d2jt3f3nf3eym"]
 
-[ext_resource type="Script" path="res://CookieClicker.gd" id="1_tt1jk"]
+[ext_resource type="Script" path="res://cookie_tapper_2.gd" id="1_pspvg"]
 [ext_resource type="Texture2D" uid="uid://dknmg0y7g8fvb" path="res://assets/Final/cookie.png" id="2_ji5l6"]
 [ext_resource type="Texture2D" uid="uid://dpds73tedjud5" path="res://assets/Final/cursor.png" id="3_n8kgn"]
 
@@ -29,15 +29,14 @@ default_font_size = 30
 font_size = 26
 
 [node name="CookieTapper2" type="Node2D"]
-script = ExtResource("1_tt1jk")
+script = ExtResource("1_pspvg")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 3.0
-offset_top = -16.0
-offset_right = 283.0
-offset_bottom = 54.0
-text = "Your Bakery!
-"
+offset_left = 1.0
+offset_top = -21.0
+offset_right = 318.0
+offset_bottom = 49.0
+text = "Your Second Bakery!"
 label_settings = SubResource("LabelSettings_fsgdr")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -131,7 +130,7 @@ offset_left = -32.0
 offset_top = 51.0
 offset_right = 229.0
 offset_bottom = 99.0
-text = "Cookies: 1000000"
+text = "Cookies: 5000000"
 label_settings = SubResource("LabelSettings_0p5jx")
 horizontal_alignment = 1
 vertical_alignment = 1

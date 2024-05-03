@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dj6cmk1enwomq"]
+[gd_scene load_steps=15 format=3 uid="uid://dj6cmk1enwomq"]
 
 [ext_resource type="Script" path="res://CookieClicker.gd" id="1_ejxwd"]
 [ext_resource type="Texture2D" uid="uid://dknmg0y7g8fvb" path="res://assets/Final/cookie.png" id="2_33rl5"]
 [ext_resource type="Texture2D" uid="uid://dpds73tedjud5" path="res://assets/Final/cursor.png" id="3_d7vil"]
+[ext_resource type="Texture2D" uid="uid://bq2ae11kkw3we" path="res://assets/Final/Grandma.png" id="4_3n6wu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fsgdr"]
 font_size = 32
@@ -27,6 +28,12 @@ default_font_size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_0p5jx"]
 font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_5777t"]
+font_size = 76
+
+[sub_resource type="LabelSettings" id="LabelSettings_e8ekr"]
+font_size = 36
 
 [node name="CookieTapper" type="Node2D"]
 script = ExtResource("1_ejxwd")
@@ -137,8 +144,43 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Grandma" type="Sprite2D" parent="."]
+position = Vector2(822, 170)
+scale = Vector2(0.649369, 0.648758)
+texture = ExtResource("4_3n6wu")
+
+[node name="BuyGrandmas" type="Button" parent="Grandma"]
+offset_left = 194.035
+offset_top = -40.0765
+offset_right = 507.035
+offset_bottom = 53.9235
+
+[node name="mnyGrandmas" type="Label" parent="Grandma"]
+offset_left = 64.6783
+offset_top = -58.5734
+offset_right = 178.678
+offset_bottom = 49.4266
+text = "0"
+label_settings = SubResource("LabelSettings_5777t")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="costG" type="Label" parent="Grandma"]
+offset_left = 200.0
+offset_top = -34.0
+offset_right = 506.0
+offset_bottom = 47.0
+text = "Cost: 100 Cookies"
+label_settings = SubResource("LabelSettings_e8ekr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer2" type="Timer" parent="."]
+
 [connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed"]
 [connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="BigCursor/BuyCursor" to="." method="_on_buy_cursor_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="lblrebirth/Buyrebirth" to="." method="_on_buyrebirth_pressed"]
+[connection signal="pressed" from="Grandma/BuyGrandmas" to="." method="_on_buy_grandmas_pressed"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
