@@ -14,7 +14,15 @@ var cookies = 0.0
 
 func _on_cookie_clicked_pressed():
 	cookies += 1.0
+	if cursors > 0:
+		cookies += 1
+	if grandmas > 0:
+		cookies += 5
 	$BigCookie/lblCookies.text = str(round(cookies)) + " Cookies"
+	if cookies >= 15:
+		$BigCursor.visible = true
+	if cookies >= 100:
+		$Grandma.visible = true
 
 func _on_buy_cursor_pressed():
 	if cookies >= costC:
@@ -22,16 +30,12 @@ func _on_buy_cursor_pressed():
 		cursors += 1
 		costC *= 1.15
 		$BigCursor/costC.text = "Cost: " + str(round(costC)) + " Cookies"
-		$BigCursor/mnyCursors.text = str(cursors)
+		$BigCursor.visible = false
+		
 		
 	if cookies < 0:
 		cookies = 0
 		
-		$Timer.start(1)
-
-func _on_timer_timeout():
-	cookies += 0.1
-	$BigCookie/lblCookies.text = str(cookies) + " Cookies"
 
 
 func _on_buy_grandmas_pressed():
@@ -40,14 +44,12 @@ func _on_buy_grandmas_pressed():
 		grandmas += 1
 		costG *= 1.15
 		$Grandma/costG.text = "Cost: " + str(round(costG)) + " Cookies"
-		$Grandma/mnyGrandmas.text = str(grandmas)
+		$BigCursor.visible = false
 		
 	if cookies < 0:
 		cookies = 0
 		
-		$Timer2.start(1)
 
 
-func _on_timer_2_timeout():
-	cookies += 1
-	$BigCookie/lblCookies.text = str(cookies) + " Cookies"
+func _on_audio_stream_player_finished():
+	$AudioStreamPlayer.play()

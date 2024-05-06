@@ -12,7 +12,10 @@ var cursors = 0
 var cookies = 0.0
 
 func _on_cookie_clicked_pressed():
-	cookies += 2.0
+	cookies += 2
+	
+	
+	.0
 	$BigCookie/lblCookies.text = str(round(cookies)) + " Cookies"
 
 func _on_buy_cursor_pressed():
@@ -25,9 +28,4 @@ func _on_buy_cursor_pressed():
 		
 	if cookies < 0:
 		cookies = 0
-		
-		$Timer.start(1)
 
-func _on_timer_timeout():
-	cookies += 0.2
-	$BigCookie/lblCookies.text = str(cookies) + " Cookies"
