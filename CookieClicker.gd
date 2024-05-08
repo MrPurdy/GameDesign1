@@ -11,14 +11,14 @@ var costM = 12000
 var costF = 1100
 var costG = 100
 var costC = 15
-var temple = 0
-var bank = 0
-var factory = 0
+var temples = 0
+var banks = 0
+var factorys = 0
 var mines = 0
 var farms = 0
 var grandmas = 0
 var cursors = 0
-var cookies = 0
+var cookies = 1300000
 
 func _on_cookie_clicked_pressed():
 	cookies += 1.0
@@ -30,11 +30,11 @@ func _on_cookie_clicked_pressed():
 		cookies += 80
 	if mines > 0:
 		cookies += 470
-	if factory > 0:
+	if factorys > 0:
 		cookies += 2600
-	if bank > 0:
+	if banks > 0:
 		cookies += 14000
-	if temple > 0:
+	if temples > 0:
 		cookies += 78000
 	
 	$BigCookie/lblCookies.text = str(round(cookies)) + " Cookies"
@@ -54,13 +54,24 @@ func _on_cookie_clicked_pressed():
 		$Mine.visible = true
 	if mines >= 1:
 		$Mine.visible = false
+	if cookies >= 130000:
+		$Factory.visible = true
+	if factorys >= 1:
+		$Factory.visible = false
+	if cookies >= 1400000:
+		$Bank.visible = true
+	if banks >= 1:
+		$Bank.visible = false
+	if cookies >= 20000000:
+		$Temple.visible = true
+	if temples >= 1:
+		$Temple.visible = false
 	
 
 func _on_buy_cursor_pressed():
 	if cookies >= costC:
 		cookies -= costC
 		cursors += 1
-		costC *= 1.15
 		$BigCursor/costC.text = "Cost: " + str(round(costC)) + " Cookies"
 		$BigCursor.visible = false
 	if cookies < 0:
@@ -72,7 +83,6 @@ func _on_buy_grandmas_pressed():
 	if cookies >= costG:
 		cookies -= costG
 		grandmas += 1
-		costG *= 1.15
 		$Grandma/costG.text = "Cost: " + str(round(costG)) + " Cookies"
 		$Grandma.visible = false
 	if cookies < 0:
@@ -83,7 +93,6 @@ func _on_buy_farm_pressed():
 	if cookies >= costF:
 		cookies -= costF
 		farms += 1
-		costF *= 1.15
 		$Farm/costF.text = "Cost: " + str(round(costF)) + " Cookies"
 		$Farm.visible = false
 	if cookies < 0:
@@ -93,8 +102,7 @@ func _on_buy_mine_pressed():
 	if cookies >= costM:
 		cookies -= costM
 		mines += 1
-		costM *= 1.15
-		$Mine/costM.text = "Cost: " + str(round(costF)) + " Cookies"
+		$Mine/costM.text = "Cost: " + str(round(costM)) + " Cookies"
 		$Mine.visible = false
 	if cookies < 0:
 		cookies = 0
@@ -105,31 +113,28 @@ func _on_audio_stream_player_finished():
 func _on_buy_factory_pressed():
 	if cookies >= costFA:
 		cookies -= costFA
-		factory += 1
-		costFA *= 1.15
-		$Factory/costFA.text = "Cost: " + str(round(costF)) + " Cookies"
+		factorys += 1
+		$Factory/costFA.text = "Cost: " + str(round(costFA)) + " Cookies"
 		$Factory.visible = false
 	if cookies < 0:
 		cookies = 0
 
 
 func _on_buy_bank_pressed():
-	if cookies >= costM:
-		cookies -= costM
-		mines += 1
-		costM *= 1.15
-		$Mine/costM.text = "Cost: " + str(round(costF)) + " Cookies"
-		$Mine.visible = false
+	if cookies >= costB:
+		cookies -= costB
+		banks += 1
+		$Bank/costB.text = "Cost: " + str(round(costB)) + " Cookies"
+		$Bank.visible = false
 	if cookies < 0:
 		cookies = 0
 
 
 func _on_buy_temple_pressed():
-	if cookies >= costM:
-		cookies -= costM
-		mines += 1
-		costM *= 1.15
-		$Mine/costM.text = "Cost: " + str(round(costF)) + " Cookies"
-		$Mine.visible = false
+	if cookies >= costT:
+		cookies -= costT
+		temples += 1
+		$Temple/costT.text = "Cost: " + str(round(costT)) + " Cookies"
+		$Temple.visible = false
 	if cookies < 0:
 		cookies = 0
