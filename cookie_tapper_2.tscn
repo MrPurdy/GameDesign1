@@ -136,8 +136,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed" flags=18]
 [connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed" flags=18]
 [connection signal="pressed" from="BigCursor/BuyCursor" to="." method="_on_buy_cursor_pressed" flags=18]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout" flags=18]
 [connection signal="pressed" from="lblrebirth/Buyrebirth" to="." method="_on_buyrebirth_pressed" flags=18]
