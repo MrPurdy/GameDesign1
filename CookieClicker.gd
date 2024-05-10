@@ -1,8 +1,12 @@
 extends Node2D
 
 
+
 func _on_buyrebirth_pressed():
-	get_tree().change_scene_to_file("res://cookie_tapper_2.tscn")
+	if cookies >= 1000000:
+		get_tree().change_scene_to_file("res://cookie_tapper_2.tscn")
+	
+	
 var costPM = 2100000000000000
 var costAM = 170000000000000
 var costTM = 14000000000000
@@ -31,7 +35,19 @@ var mines = 0
 var farms = 0
 var grandmas = 0
 var cursors = 0
-var cookies = 100000000000000000
+var cookies = 0
+var rebirths = 1
+
+func _click():
+	call_deferred("do_a_left_click")
+	
+func do_a_left_click():
+	var a = InputEventMouseButton.new()
+	a.set_button_index(1)
+	a.position = Vector2(102.5, 150)
+	a.pressed = true
+	Input.parse_input_event(a)
+	
 
 func _on_cookie_clicked_pressed():
 	cookies += 1.0
@@ -162,8 +178,6 @@ func _on_buy_mine_pressed():
 		$Mine.visible = false
 	if cookies < 0:
 		cookies = 0
-func _on_audio_stream_player_finished():
-	$AudioStreamPlayer.play()
 
 func _on_buy_factory_pressed():
 	if cookies >= costFA:
@@ -263,3 +277,7 @@ func _on_buy_prism_pressed():
 		$Prism.visible = false
 	if cookies < 0:
 		cookies = 0
+		
+func _on_audio_stream_player_finished():
+	$AudioStreamPlayer.play()
+
