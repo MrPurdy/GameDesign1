@@ -3,8 +3,8 @@ extends Node2D
 
 
 func _on_buyrebirth_pressed():
-	if cookies >= 1000000:
-		get_tree().change_scene_to_file("res://cookie_tapper_2.tscn")
+	if cookies >= 600000000:
+		get_tree().change_scene_to_file("res://cookie_tapper_5.tscn")
 	
 var costPM = 2100000000000000
 var costAM = 170000000000000
@@ -35,13 +35,14 @@ var farms = 0
 var grandmas = 0
 var cursors = 0
 var cookies = 0
-var rebirths = 0
+var rebirths = 3
 
 func _click():
 	call_deferred("do_a_left_click")
 	
 func do_a_left_click():
 	var a = InputEventMouseButton.new()
+	@warning_ignore("int_as_enum_without_cast")
 	a.set_button_index(1)
 	a.position = Vector2(102.5, 150)
 	a.pressed = true
@@ -49,35 +50,35 @@ func do_a_left_click():
 	
 
 func _on_cookie_clicked_pressed():
-	cookies += 1.0
+	cookies += 8.0
 	if cursors > 0:
-		cookies += 1
+		cookies += 8
 	if grandmas > 0:
-		cookies += 10
-	if farms > 0:
 		cookies += 80
+	if farms > 0:
+		cookies += 640
 	if mines > 0:
-		cookies += 470
+		cookies += 3760
 	if factorys > 0:
-		cookies += 2600
+		cookies += 20800
 	if banks > 0:
-		cookies += 14000
+		cookies += 112000
 	if temples > 0:
-		cookies += 78000
+		cookies += 624000
 	if wizardtowers > 0:
-		cookies += 440000
+		cookies += 3520000
 	if shipments > 0:
-		cookies += 2600000
+		cookies += 20800000
 	if alchemylabs > 0:
-		cookies += 16000000
+		cookies += 128000000
 	if portals > 0:
-		cookies += 100000000
+		cookies += 800000000
 	if timemachines > 0:
-		cookies += 650000000
+		cookies += 5200000000
 	if antimatters > 0:
-		cookies += 4300000000
+		cookies += 34400000000
 	if prisms > 0:
-		cookies += 29000000000
+		cookies += 232000000000
 	
 	$BigCookie/lblCookies.text = str(round(cookies)) + " Cookies"
 	if cookies >= 15:
@@ -279,4 +280,3 @@ func _on_buy_prism_pressed():
 		
 func _on_audio_stream_player_finished():
 	$AudioStreamPlayer.play()
-

@@ -4,7 +4,7 @@ extends Node2D
 
 func _on_buyrebirth_pressed():
 	if cookies >= 10000000:
-		get_tree().change_scene_to_file("res://cookie_tapper_2.tscn")
+		get_tree().change_scene_to_file("res://cookie_tapper_3.tscn")
 	
 var costPM = 2100000000000000
 var costAM = 170000000000000
@@ -34,14 +34,15 @@ var mines = 0
 var farms = 0
 var grandmas = 0
 var cursors = 0
-var cookies = 0
-var rebirths = 12
+var cookies = 10000000
+var rebirths = 2
 
 func _click():
 	call_deferred("do_a_left_click")
 	
 func do_a_left_click():
 	var a = InputEventMouseButton.new()
+	@warning_ignore("int_as_enum_without_cast")
 	a.set_button_index(1)
 	a.position = Vector2(102.5, 150)
 	a.pressed = true
