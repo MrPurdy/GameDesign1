@@ -6,10 +6,10 @@ func _on_buyrebirth_pressed():
 	if cookies >= 1000000:
 		get_tree().change_scene_to_file("res://cookie_tapper_2.tscn")
 	
-var costPM = 2100000000000000
-var costAM = 170000000000000
-var costTM = 14000000000000
-var costP = 1000000000000
+var costPM = 21000000000000
+var costAM = 1700000000000
+var costTM = 140000000000
+var costP = 100000000000
 var costA = 75000000000
 var costS = 5100000000
 var costWT = 330000000

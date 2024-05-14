@@ -3,13 +3,13 @@ extends Node2D
 
 
 func _on_buyrebirth_pressed():
-	if cookies >= 600000000:
-		get_tree().change_scene_to_file("res://cookie_tapper_2.tscn")
+	if cookies >= 12000000000:
+		get_tree().change_scene_to_file("res://cookie_tapper_6.tscn")
 	
-var costPM = 2100000000000000
-var costAM = 170000000000000
-var costTM = 14000000000000
-var costP = 1000000000000
+var costPM = 21000000000000
+var costAM = 1700000000000
+var costTM = 140000000000
+var costP = 100000000000
 var costA = 75000000000
 var costS = 5100000000
 var costWT = 330000000
@@ -50,35 +50,35 @@ func do_a_left_click():
 	
 
 func _on_cookie_clicked_pressed():
-	cookies += 16.0
+	cookies += 32.0
 	if cursors > 0:
-		cookies += 16
+		cookies += 32
 	if grandmas > 0:
-		cookies += 160
+		cookies += 320
 	if farms > 0:
-		cookies += 1280
+		cookies += 2560
 	if mines > 0:
-		cookies += 7520
+		cookies += 15040
 	if factorys > 0:
-		cookies += 41600
+		cookies += 83200
 	if banks > 0:
-		cookies += 224000
+		cookies += 448000
 	if temples > 0:
-		cookies += 1248000
+		cookies += 2496000
 	if wizardtowers > 0:
-		cookies += 7040000
+		cookies += 14080000
 	if shipments > 0:
-		cookies += 41600000
+		cookies += 83200000
 	if alchemylabs > 0:
-		cookies += 256000000
+		cookies += 512000000
 	if portals > 0:
-		cookies += 1600000000
+		cookies += 3200000000
 	if timemachines > 0:
-		cookies += 10400000000
+		cookies += 20800000000
 	if antimatters > 0:
-		cookies += 68800000000
+		cookies += 137600000000
 	if prisms > 0:
-		cookies += 464000000000
+		cookies += 928000000000
 	
 	$BigCookie/lblCookies.text = str(round(cookies)) + " Cookies"
 	if cookies >= 15:
@@ -129,11 +129,11 @@ func _on_cookie_clicked_pressed():
 		$TimeMachine.visible = true
 	if timemachines >= 1:
 		$TimeMachine.visible = false
-	if cookies >= 17000000000000:
+	if cookies >= 5000000000000:
 		$AntiMatter.visible = true
 	if antimatters >= 1:
 		$AntiMatter.visible = false
-	if cookies >= 210000000000000:
+	if cookies >= 10000000000000:
 		$Prism.visible = true
 	if prisms >= 1:
 		$Prism.visible = false
