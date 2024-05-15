@@ -21,9 +21,11 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_fsgdr"]
 font_size = 32
+font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_uvc8t"]
 font_size = 112
+font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_j52of"]
 default_font_size = 112
@@ -33,6 +35,7 @@ font_size = 111
 
 [sub_resource type="LabelSettings" id="LabelSettings_imeh2"]
 font_size = 36
+font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_qxx7u"]
 default_font_size = 30
@@ -51,10 +54,10 @@ position = Vector2(4, 0)
 script = ExtResource("1_ejxwd")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 6.0
-offset_top = -11.0
-offset_right = 286.0
-offset_bottom = 59.0
+offset_left = 15.0
+offset_top = -18.0
+offset_right = 295.0
+offset_bottom = 52.0
 text = "Your Bakery!
 "
 label_settings = SubResource("LabelSettings_fsgdr")
@@ -68,10 +71,15 @@ scale = Vector2(0.274687, 0.250156)
 texture = ExtResource("2_33rl5")
 
 [node name="lblCookies" type="Label" parent="BigCookie"]
-offset_left = -316.724
-offset_top = -627.608
-offset_right = 346.276
-offset_bottom = -371.608
+anchors_preset = -1
+anchor_left = 0.000357819
+anchor_top = -0.000505066
+anchor_right = 0.0178578
+anchor_bottom = -0.000505028
+offset_left = -331.286
+offset_top = -647.596
+offset_right = 331.714
+offset_bottom = -391.596
 text = "0 Cookies
 "
 label_settings = SubResource("LabelSettings_uvc8t")
@@ -485,65 +493,74 @@ autoplay = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 show_behind_parent = true
-offset_right = 1150.0
+offset_left = -3.0
+offset_right = 1147.0
 offset_bottom = 646.0
+mouse_filter = 2
 texture = ExtResource("18_r722t")
 
-[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed"]
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+offset_left = -6.0
+offset_right = 1150.0
+offset_bottom = 116.0
+mouse_filter = 2
+
 [connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed"]
 [connection signal="pressed" from="BigCursor/BuyCursor" to="." method="_on_buy_cursor_pressed"]
 [connection signal="pressed" from="lblrebirth/Buyrebirth" to="." method="_on_buyrebirth_pressed"]
 [connection signal="pressed" from="Grandma/BuyGrandmas" to="." method="_on_buy_grandmas_pressed"]
-[connection signal="pressed" from="Farm/BuyFarm" to="." method="_on_buy_farm_pressed"]
 [connection signal="pressed" from="Farm/BuyFarm" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Farm/BuyFarm" to="." method="_on_buy_farm_pressed"]
+[connection signal="pressed" from="Mine/BuyMine" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Mine/BuyMine" to="." method="_on_buy_farm_pressed"]
 [connection signal="pressed" from="Mine/BuyMine" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="Mine/BuyMine" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_factory_pressed"]
 [connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_farm_pressed"]
 [connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_factory_pressed"]
-[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_bank_pressed"]
 [connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_farm_pressed"]
 [connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_bank_pressed"]
-[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_farm_pressed"]
-[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_temple_pressed"]
-[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_mine_pressed"]
 [connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_farm_pressed"]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_temple_pressed"]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_w_tower_pressed"]
+[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_temple_pressed"]
+[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_farm_pressed"]
+[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_mine_pressed"]
 [connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_farm_pressed"]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_temple_pressed"]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_shipment_pressed"]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_temple_pressed"]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_w_tower_pressed"]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_farm_pressed"]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_mine_pressed"]
 [connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_farm_pressed"]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_temple_pressed"]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_alchemy_pressed"]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_temple_pressed"]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_shipment_pressed"]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_farm_pressed"]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_mine_pressed"]
 [connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_farm_pressed"]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_temple_pressed"]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_portal_pressed"]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_temple_pressed"]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_alchemy_pressed"]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_farm_pressed"]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_mine_pressed"]
 [connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_farm_pressed"]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_temple_pressed"]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_time_machine_pressed"]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_temple_pressed"]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_portal_pressed"]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_farm_pressed"]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_mine_pressed"]
 [connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_farm_pressed"]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_temple_pressed"]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_anti_matter_pressed"]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_temple_pressed"]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_time_machine_pressed"]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_farm_pressed"]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_mine_pressed"]
 [connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_temple_pressed"]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_anti_matter_pressed"]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_farm_pressed"]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_mine_pressed"]
+[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_temple_pressed"]
 [connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_prism_pressed"]
 [connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_farm_pressed"]
-[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_temple_pressed"]
 [connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_mine_pressed"]
-[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_button_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

@@ -35,7 +35,7 @@ var farms = 0
 var grandmas = 0
 var cursors = 0
 var cookies = 0
-var rebirths = 3
+var rebirths = 2
 
 func _click():
 	call_deferred("do_a_left_click")

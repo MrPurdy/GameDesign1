@@ -34,8 +34,8 @@ var mines = 0
 var farms = 0
 var grandmas = 0
 var cursors = 0
-var cookies = 10000000
-var rebirths = 2
+var cookies = 0
+var rebirths = 1
 
 func _click():
 	call_deferred("do_a_left_click")

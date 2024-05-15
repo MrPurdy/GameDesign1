@@ -21,9 +21,11 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_fsgdr"]
 font_size = 32
+font_color = Color(1, 0.368627, 0.12549, 0.996078)
 
 [sub_resource type="LabelSettings" id="LabelSettings_uvc8t"]
 font_size = 112
+font_color = Color(1, 0.368627, 0.12549, 0.996078)
 
 [sub_resource type="Theme" id="Theme_j52of"]
 default_font_size = 112
@@ -33,6 +35,7 @@ font_size = 111
 
 [sub_resource type="LabelSettings" id="LabelSettings_imeh2"]
 font_size = 36
+font_color = Color(1, 0.368627, 0.12549, 0.996078)
 
 [sub_resource type="Theme" id="Theme_qxx7u"]
 default_font_size = 30
@@ -493,63 +496,71 @@ autoplay = true
 show_behind_parent = true
 offset_right = 1150.0
 offset_bottom = 646.0
+mouse_filter = 2
 texture = ExtResource("18_2lvqk")
 
-[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed" flags=18]
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+offset_left = -6.0
+offset_right = 1149.0
+offset_bottom = 116.0
+mouse_filter = 2
+
 [connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed" flags=18]
 [connection signal="pressed" from="BigCursor/BuyCursor" to="." method="_on_buy_cursor_pressed" flags=18]
 [connection signal="pressed" from="lblrebirth/Buyrebirth" to="." method="_on_buyrebirth_pressed" flags=18]
 [connection signal="pressed" from="Grandma/BuyGrandmas" to="." method="_on_buy_grandmas_pressed" flags=18]
-[connection signal="pressed" from="Farm/BuyFarm" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Farm/BuyFarm" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Farm/BuyFarm" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="Mine/BuyMine" to="." method="_on_button_pressed" flags=18]
 [connection signal="pressed" from="Mine/BuyMine" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Mine/BuyMine" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Mine/BuyMine" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_factory_pressed" flags=18]
 [connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_factory_pressed" flags=18]
-[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_bank_pressed" flags=18]
 [connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_bank_pressed" flags=18]
-[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_temple_pressed" flags=18]
-[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_temple_pressed" flags=18]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_w_tower_pressed" flags=18]
+[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_temple_pressed" flags=18]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_shipment_pressed" flags=18]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_w_tower_pressed" flags=18]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_temple_pressed" flags=18]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_alchemy_pressed" flags=18]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_shipment_pressed" flags=18]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_temple_pressed" flags=18]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_portal_pressed" flags=18]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_alchemy_pressed" flags=18]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_temple_pressed" flags=18]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_time_machine_pressed" flags=18]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_portal_pressed" flags=18]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_temple_pressed" flags=18]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_anti_matter_pressed" flags=18]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_time_machine_pressed" flags=18]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_anti_matter_pressed" flags=18]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_mine_pressed" flags=18]
+[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_temple_pressed" flags=18]
 [connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_prism_pressed" flags=18]
 [connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_temple_pressed" flags=18]
 [connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_button_pressed" flags=18]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished" flags=18]
