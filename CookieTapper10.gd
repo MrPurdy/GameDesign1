@@ -4,7 +4,7 @@ extends Node2D
 
 func _on_buyrebirth_pressed():
 	if cookies >= 50000000000:
-		get_tree().change_scene_to_file("res://cookie_tapper_2.tscn")
+		get_tree().change_scene_to_file("res://cookie_clicker.tscn")
 	
 var costPM = 21000000000000
 var costAM = 1700000000000
@@ -35,7 +35,7 @@ var farms = 0
 var grandmas = 0
 var cursors = 0
 var cookies = 0
-var rebirths = 5
+var rebirths = 9
 
 func _click():
 	call_deferred("do_a_left_click")
@@ -50,35 +50,35 @@ func do_a_left_click():
 	
 
 func _on_cookie_clicked_pressed():
-	cookies += 32.0
+	cookies += 512.0
 	if cursors > 0:
-		cookies += 32
+		cookies += 512
 	if grandmas > 0:
-		cookies += 320
+		cookies += 5120
 	if farms > 0:
-		cookies += 2560
+		cookies += 40960
 	if mines > 0:
-		cookies += 15040
+		cookies += 240640
 	if factorys > 0:
-		cookies += 83200
+		cookies += 1331200
 	if banks > 0:
-		cookies += 448000
+		cookies += 7168000
 	if temples > 0:
-		cookies += 2496000
+		cookies += 39936000
 	if wizardtowers > 0:
-		cookies += 14080000
+		cookies += 225280000
 	if shipments > 0:
-		cookies += 83200000
+		cookies += 13312000000
 	if alchemylabs > 0:
-		cookies += 512000000
+		cookies += 8196000000
 	if portals > 0:
-		cookies += 3200000000
+		cookies += 51200000000
 	if timemachines > 0:
-		cookies += 20800000000
+		cookies += 332800000000
 	if antimatters > 0:
-		cookies += 137600000000
+		cookies += 2201600000000
 	if prisms > 0:
-		cookies += 928000000000
+		cookies += 14848000000000
 	
 	$BigCookie/lblCookies.text = str(round(cookies)) + " Cookies"
 	if cookies >= 15:

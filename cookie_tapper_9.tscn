@@ -1,31 +1,31 @@
-[gd_scene load_steps=28 format=3 uid="uid://bxhae3ad6oh6o"]
+[gd_scene load_steps=28 format=3 uid="uid://d0qp28wbe5gv1"]
 
-[ext_resource type="Script" path="res://CookieTapper5.gd" id="1_0ao33"]
-[ext_resource type="Texture2D" uid="uid://dknmg0y7g8fvb" path="res://assets/Final/cookie.png" id="2_wju3a"]
-[ext_resource type="Texture2D" uid="uid://dpds73tedjud5" path="res://assets/Final/cursor.png" id="3_xm7yo"]
-[ext_resource type="Texture2D" uid="uid://bq2ae11kkw3we" path="res://assets/Final/Grandma.png" id="4_g01o7"]
-[ext_resource type="Texture2D" uid="uid://mrped7c8f6f4" path="res://assets/Final/Farm.png" id="5_t68xi"]
-[ext_resource type="Texture2D" uid="uid://p533qgf17k7b" path="res://assets/Final/Mine.png" id="6_h5kbg"]
-[ext_resource type="Texture2D" uid="uid://dg2koyuqlyti8" path="res://assets/Final/Factory.png" id="7_uu6mj"]
-[ext_resource type="Texture2D" uid="uid://5pwmis2qn45b" path="res://assets/Final/Bank.png" id="8_d3rnl"]
-[ext_resource type="Texture2D" uid="uid://cw7n6vkn2xlv6" path="res://assets/Final/Temple.png" id="9_k3gek"]
-[ext_resource type="Texture2D" uid="uid://bgubxm8x00x0p" path="res://assets/Final/Wizard Tower.png" id="10_au2er"]
-[ext_resource type="Texture2D" uid="uid://drnaxppm2w2t6" path="res://assets/Final/Shipment.png" id="11_4mdct"]
-[ext_resource type="Texture2D" uid="uid://m5ic3p6y47bd" path="res://assets/Final/Alchemy Lab.png" id="12_ovyy3"]
-[ext_resource type="Texture2D" uid="uid://dkcd36ojgeiw7" path="res://assets/Final/Portal.png" id="13_2gf42"]
-[ext_resource type="Texture2D" uid="uid://cgxi0577us4vo" path="res://assets/Final/Time machine.png" id="14_k7k67"]
-[ext_resource type="Texture2D" uid="uid://dxeor00ikmsum" path="res://assets/Final/Anti Matter.png" id="15_5f6v2"]
-[ext_resource type="Texture2D" uid="uid://dxw2d0wlx6nba" path="res://assets/Final/Prism.png" id="16_ha7ew"]
-[ext_resource type="AudioStream" uid="uid://vdqchyv723s4" path="res://assets/Final/New_Project.mp3" id="17_x17bh"]
-[ext_resource type="Texture2D" uid="uid://bl5r33ef1wkyk" path="res://assets/Final/Background 5.png" id="18_ses3d"]
+[ext_resource type="Script" path="res://CookieTapper9.gd" id="1_pa01o"]
+[ext_resource type="Texture2D" uid="uid://dknmg0y7g8fvb" path="res://assets/Final/cookie.png" id="2_6kenh"]
+[ext_resource type="Texture2D" uid="uid://dpds73tedjud5" path="res://assets/Final/cursor.png" id="3_ha6uw"]
+[ext_resource type="Texture2D" uid="uid://bq2ae11kkw3we" path="res://assets/Final/Grandma.png" id="4_qq0cl"]
+[ext_resource type="Texture2D" uid="uid://mrped7c8f6f4" path="res://assets/Final/Farm.png" id="5_vxg07"]
+[ext_resource type="Texture2D" uid="uid://p533qgf17k7b" path="res://assets/Final/Mine.png" id="6_ol5nd"]
+[ext_resource type="Texture2D" uid="uid://dg2koyuqlyti8" path="res://assets/Final/Factory.png" id="7_qnrcx"]
+[ext_resource type="Texture2D" uid="uid://5pwmis2qn45b" path="res://assets/Final/Bank.png" id="8_sl42r"]
+[ext_resource type="Texture2D" uid="uid://cw7n6vkn2xlv6" path="res://assets/Final/Temple.png" id="9_4yu2h"]
+[ext_resource type="Texture2D" uid="uid://bgubxm8x00x0p" path="res://assets/Final/Wizard Tower.png" id="10_s3n0f"]
+[ext_resource type="Texture2D" uid="uid://drnaxppm2w2t6" path="res://assets/Final/Shipment.png" id="11_pj23u"]
+[ext_resource type="Texture2D" uid="uid://m5ic3p6y47bd" path="res://assets/Final/Alchemy Lab.png" id="12_q2i22"]
+[ext_resource type="Texture2D" uid="uid://dkcd36ojgeiw7" path="res://assets/Final/Portal.png" id="13_83oma"]
+[ext_resource type="Texture2D" uid="uid://cgxi0577us4vo" path="res://assets/Final/Time machine.png" id="14_htfo8"]
+[ext_resource type="Texture2D" uid="uid://dxeor00ikmsum" path="res://assets/Final/Anti Matter.png" id="15_i44ym"]
+[ext_resource type="Texture2D" uid="uid://dxw2d0wlx6nba" path="res://assets/Final/Prism.png" id="16_5e1v4"]
+[ext_resource type="AudioStream" uid="uid://vdqchyv723s4" path="res://assets/Final/New_Project.mp3" id="17_l2r1r"]
+[ext_resource type="Texture2D" uid="uid://bt15e57mo3l0e" path="res://assets/Final/Background 9.png" id="18_xda6w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fsgdr"]
 font_size = 32
-font_color = Color(0.682353, 0.678431, 0.517647, 1)
+font_color = Color(1, 0.368627, 0.12549, 0.996078)
 
 [sub_resource type="LabelSettings" id="LabelSettings_uvc8t"]
 font_size = 112
-font_color = Color(0.682353, 0.678431, 0.517647, 1)
+font_color = Color(1, 0.368627, 0.12549, 0.996078)
 
 [sub_resource type="Theme" id="Theme_j52of"]
 default_font_size = 112
@@ -35,7 +35,7 @@ font_size = 111
 
 [sub_resource type="LabelSettings" id="LabelSettings_imeh2"]
 font_size = 36
-font_color = Color(0.682353, 0.678431, 0.517647, 1)
+font_color = Color(1, 0.368627, 0.12549, 0.996078)
 
 [sub_resource type="Theme" id="Theme_qxx7u"]
 default_font_size = 30
@@ -49,16 +49,16 @@ font_size = 36
 [sub_resource type="LabelSettings" id="LabelSettings_kk5in"]
 font_size = 41
 
-[node name="CookieTapper5" type="Node2D"]
+[node name="CookieTapper9" type="Node2D"]
 position = Vector2(4, 0)
-script = ExtResource("1_0ao33")
+script = ExtResource("1_pa01o")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 6.0
 offset_top = -11.0
 offset_right = 286.0
 offset_bottom = 59.0
-text = "Your 5th Bakery!
+text = "Your 9th Bakery!
 "
 label_settings = SubResource("LabelSettings_fsgdr")
 horizontal_alignment = 1
@@ -68,7 +68,7 @@ metadata/_edit_use_anchors_ = true
 [node name="BigCookie" type="Sprite2D" parent="."]
 position = Vector2(122, 175)
 scale = Vector2(0.274687, 0.250156)
-texture = ExtResource("2_wju3a")
+texture = ExtResource("2_6kenh")
 
 [node name="lblCookies" type="Label" parent="BigCookie"]
 offset_left = -316.724
@@ -95,7 +95,7 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(822, 61)
 scale = Vector2(0.227728, 0.219727)
-texture = ExtResource("3_xm7yo")
+texture = ExtResource("3_ha6uw")
 
 [node name="BuyCursor" type="Button" parent="BigCursor"]
 offset_left = 553.291
@@ -121,7 +121,7 @@ offset_left = 406.0
 offset_top = 3.0
 offset_right = 618.0
 offset_bottom = 63.0
-text = "Rebirths: 4"
+text = "Rebirths: 8"
 label_settings = SubResource("LabelSettings_imeh2")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -131,7 +131,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.113208
-anchor_right = 0.136792
+anchor_right = 0.264151
 offset_left = -14.0
 offset_top = 54.0
 offset_right = 209.0
@@ -148,7 +148,7 @@ offset_left = -32.0
 offset_top = 51.0
 offset_right = 229.0
 offset_bottom = 99.0
-text = "Cookies: 12000000000"
+text = "Cookies: 1600000000000"
 label_settings = SubResource("LabelSettings_0p5jx")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -158,7 +158,7 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(864, 65)
 scale = Vector2(0.649369, 0.648758)
-texture = ExtResource("4_g01o7")
+texture = ExtResource("4_qq0cl")
 
 [node name="BuyGrandmas" type="Button" parent="Grandma"]
 offset_left = 121.657
@@ -180,7 +180,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(892, 57)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("5_t68xi")
+texture = ExtResource("5_vxg07")
 
 [node name="BuyFarm" type="Button" parent="Farm"]
 anchors_preset = 2
@@ -206,7 +206,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(896, 59)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("6_h5kbg")
+texture = ExtResource("6_ol5nd")
 
 [node name="BuyMine" type="Button" parent="Mine"]
 anchors_preset = 2
@@ -232,7 +232,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(873, 50)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("7_uu6mj")
+texture = ExtResource("7_qnrcx")
 
 [node name="BuyFactory" type="Button" parent="Factory"]
 anchors_preset = 2
@@ -258,7 +258,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(896, 59)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("8_d3rnl")
+texture = ExtResource("8_sl42r")
 
 [node name="BuyBank" type="Button" parent="Bank"]
 anchors_preset = 2
@@ -284,7 +284,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(896, 59)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("9_k3gek")
+texture = ExtResource("9_4yu2h")
 
 [node name="BuyTemple" type="Button" parent="Temple"]
 anchors_preset = 2
@@ -310,7 +310,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(896, 63.1244)
 scale = Vector2(0.415556, 0.471292)
-texture = ExtResource("10_au2er")
+texture = ExtResource("10_s3n0f")
 
 [node name="BuyWTower" type="Button" parent="WTower"]
 anchors_preset = 2
@@ -336,7 +336,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(838, 65)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("11_4mdct")
+texture = ExtResource("11_pj23u")
 
 [node name="BuyShipment" type="Button" parent="Shipment"]
 anchors_preset = 2
@@ -362,7 +362,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(844, 47)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("12_ovyy3")
+texture = ExtResource("12_q2i22")
 
 [node name="BuyAlchemy" type="Button" parent="Alchemy"]
 anchors_preset = 2
@@ -388,7 +388,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(858, 51)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("13_2gf42")
+texture = ExtResource("13_83oma")
 
 [node name="BuyPortal" type="Button" parent="Portal"]
 anchors_preset = 2
@@ -414,7 +414,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(796, 53)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("14_k7k67")
+texture = ExtResource("14_htfo8")
 
 [node name="BuyTimeMachine" type="Button" parent="TimeMachine"]
 anchors_preset = 2
@@ -440,7 +440,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(816, 47)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("15_5f6v2")
+texture = ExtResource("15_i44ym")
 
 [node name="BuyAntiMatter" type="Button" parent="AntiMatter"]
 anchors_preset = 2
@@ -466,7 +466,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(790, 51)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("16_ha7ew")
+texture = ExtResource("16_5e1v4")
 
 [node name="BuyPrism" type="Button" parent="Prism"]
 anchors_preset = 2
@@ -489,7 +489,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("17_x17bh")
+stream = ExtResource("17_l2r1r")
 autoplay = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -497,12 +497,12 @@ show_behind_parent = true
 offset_right = 1150.0
 offset_bottom = 646.0
 mouse_filter = 2
-texture = ExtResource("18_ses3d")
+texture = ExtResource("18_xda6w")
 
 [node name="Panel" type="Panel" parent="."]
 show_behind_parent = true
 offset_left = -6.0
-offset_right = 1151.0
+offset_right = 1149.0
 offset_bottom = 116.0
 mouse_filter = 2
 

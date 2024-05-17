@@ -35,7 +35,7 @@ var farms = 0
 var grandmas = 0
 var cursors = 0
 var cookies = 0
-var rebirths = 5
+var rebirths = 6
 
 func _click():
 	call_deferred("do_a_left_click")
@@ -50,35 +50,35 @@ func do_a_left_click():
 	
 
 func _on_cookie_clicked_pressed():
-	cookies += 32.0
+	cookies += 64.0
 	if cursors > 0:
-		cookies += 32
+		cookies += 64
 	if grandmas > 0:
-		cookies += 320
+		cookies += 640
 	if farms > 0:
-		cookies += 2560
+		cookies += 5120
 	if mines > 0:
-		cookies += 15040
+		cookies += 30080
 	if factorys > 0:
-		cookies += 83200
+		cookies += 166400
 	if banks > 0:
-		cookies += 448000
+		cookies += 896000
 	if temples > 0:
-		cookies += 2496000
+		cookies += 4992000
 	if wizardtowers > 0:
-		cookies += 14080000
+		cookies += 28160000
 	if shipments > 0:
-		cookies += 83200000
+		cookies += 166400000
 	if alchemylabs > 0:
-		cookies += 512000000
+		cookies += 1024000000
 	if portals > 0:
-		cookies += 3200000000
+		cookies += 6400000000
 	if timemachines > 0:
-		cookies += 20800000000
+		cookies += 41600000000
 	if antimatters > 0:
-		cookies += 137600000000
+		cookies += 275200000000
 	if prisms > 0:
-		cookies += 928000000000
+		cookies += 1856000000000
 	
 	$BigCookie/lblCookies.text = str(round(cookies)) + " Cookies"
 	if cookies >= 15:
