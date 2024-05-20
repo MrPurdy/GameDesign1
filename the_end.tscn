@@ -1,0 +1,197 @@
+[gd_scene load_steps=18 format=3 uid="uid://civifyrdvfnb2"]
+
+[ext_resource type="Script" path="res://the_end.gd" id="1_rdyam"]
+[ext_resource type="Texture2D" uid="uid://cb0peo42fiytk" path="res://assets/Final/Final.png" id="2_kq85s"]
+[ext_resource type="AudioStream" uid="uid://vdqchyv723s4" path="res://assets/Final/New_Project.mp3" id="3_df70p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0gox5"]
+font_size = 63
+
+[sub_resource type="LabelSettings" id="LabelSettings_uhh0b"]
+font_size = 36
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_6u8oi"]
+default_font_size = 55
+
+[sub_resource type="Theme" id="Theme_8xflk"]
+default_font_size = 55
+
+[sub_resource type="Theme" id="Theme_nkwaq"]
+default_font_size = 55
+
+[sub_resource type="Theme" id="Theme_a41iw"]
+default_font_size = 55
+
+[sub_resource type="Theme" id="Theme_trdlv"]
+default_font_size = 55
+
+[sub_resource type="Theme" id="Theme_2tgw3"]
+default_font_size = 55
+
+[sub_resource type="Theme" id="Theme_g5l53"]
+default_font_size = 55
+
+[sub_resource type="Theme" id="Theme_tis5l"]
+default_font_size = 55
+
+[sub_resource type="Theme" id="Theme_bhnbf"]
+default_font_size = 55
+
+[sub_resource type="Theme" id="Theme_cy6mw"]
+default_font_size = 46
+
+[sub_resource type="Theme" id="Theme_na4vh"]
+default_font_size = 45
+
+[sub_resource type="Theme" id="Theme_cwgpm"]
+
+[node name="TheEnd" type="Node2D"]
+position = Vector2(4, 0)
+script = ExtResource("1_rdyam")
+
+[node name="lblCongrat" type="Label" parent="."]
+offset_left = 58.0
+offset_top = 3.0
+offset_right = 1038.0
+offset_bottom = 92.0
+text = "Congrats! You made it to the end!!!"
+label_settings = SubResource("LabelSettings_0gox5")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 1152.0
+offset_bottom = 644.0
+mouse_filter = 2
+texture = ExtResource("2_kq85s")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_df70p")
+autoplay = true
+
+[node name="lblExplain" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 110.0
+offset_right = 1079.0
+offset_bottom = 216.0
+text = "Click one of the buttons below to restart at any of the levels
+or you can decide to leave!"
+label_settings = SubResource("LabelSettings_uhh0b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lvl1" type="Button" parent="."]
+offset_left = 12.0
+offset_top = 270.0
+offset_right = 214.0
+offset_bottom = 374.0
+theme = SubResource("Theme_6u8oi")
+text = "Bakery1"
+
+[node name="lvl2" type="Button" parent="."]
+offset_left = 238.0
+offset_top = 272.0
+offset_right = 440.0
+offset_bottom = 376.0
+theme = SubResource("Theme_8xflk")
+text = "Bakery2"
+
+[node name="lvl3" type="Button" parent="."]
+offset_left = 469.0
+offset_top = 269.0
+offset_right = 671.0
+offset_bottom = 373.0
+theme = SubResource("Theme_nkwaq")
+text = "Bakery3"
+
+[node name="lvl4" type="Button" parent="."]
+offset_left = 694.0
+offset_top = 268.0
+offset_right = 896.0
+offset_bottom = 372.0
+theme = SubResource("Theme_a41iw")
+text = "Bakery4"
+
+[node name="lvl5" type="Button" parent="."]
+offset_left = 923.0
+offset_top = 268.0
+offset_right = 1125.0
+offset_bottom = 372.0
+theme = SubResource("Theme_trdlv")
+text = "Bakery5"
+
+[node name="lvl6" type="Button" parent="."]
+offset_left = 4.0
+offset_top = 409.0
+offset_right = 227.0
+offset_bottom = 513.0
+theme = SubResource("Theme_2tgw3")
+text = "Bakery6"
+
+[node name="lvl7" type="Button" parent="."]
+offset_left = 230.0
+offset_top = 406.0
+offset_right = 453.0
+offset_bottom = 510.0
+theme = SubResource("Theme_g5l53")
+text = "Bakery7"
+
+[node name="lvl8" type="Button" parent="."]
+offset_left = 458.0
+offset_top = 408.0
+offset_right = 681.0
+offset_bottom = 512.0
+theme = SubResource("Theme_tis5l")
+text = "Bakery8"
+
+[node name="lvl9" type="Button" parent="."]
+offset_left = 687.0
+offset_top = 412.0
+offset_right = 910.0
+offset_bottom = 516.0
+theme = SubResource("Theme_bhnbf")
+text = "Bakery9"
+
+[node name="lvl10" type="Button" parent="."]
+offset_left = 919.0
+offset_top = 411.0
+offset_right = 1151.0
+offset_bottom = 515.0
+theme = SubResource("Theme_cy6mw")
+text = "Bakery10"
+
+[node name="btnExit" type="Button" parent="."]
+offset_left = 390.0
+offset_top = 526.0
+offset_right = 730.0
+offset_bottom = 630.0
+theme = SubResource("Theme_na4vh")
+text = "Exit"
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0.133333, 0.133333, 0.133333, 1)
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+light_mask = 640
+offset_right = 1146.0
+offset_bottom = 210.0
+mouse_filter = 2
+theme = SubResource("Theme_cwgpm")
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished" flags=18]
+[connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="lvl4" to="." method="_on_lvl_4_pressed"]
+[connection signal="pressed" from="lvl5" to="." method="_on_lvl_5_pressed"]
+[connection signal="pressed" from="lvl6" to="." method="_on_lvl_6_pressed"]
+[connection signal="pressed" from="lvl7" to="." method="_on_lvl_7_pressed"]
+[connection signal="pressed" from="lvl8" to="." method="_on_lvl_8_pressed"]
+[connection signal="pressed" from="lvl9" to="." method="_on_lvl_9_pressed"]
+[connection signal="pressed" from="lvl10" to="." method="_on_lvl_10_pressed"]
+[connection signal="pressed" from="btnExit" to="." method="_on_btn_exit_pressed"]

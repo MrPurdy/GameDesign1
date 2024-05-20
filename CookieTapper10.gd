@@ -3,8 +3,8 @@ extends Node2D
 
 
 func _on_buyrebirth_pressed():
-	if cookies >= 50000000000:
-		get_tree().change_scene_to_file("res://cookie_clicker.tscn")
+	if cookies >= 10000000000000:
+		get_tree().change_scene_to_file("res://the_end.tscn")
 	
 var costPM = 21000000000000
 var costAM = 1700000000000
@@ -34,7 +34,7 @@ var mines = 0
 var farms = 0
 var grandmas = 0
 var cursors = 0
-var cookies = 0
+var cookies = 10000000000000
 var rebirths = 9
 
 func _click():
