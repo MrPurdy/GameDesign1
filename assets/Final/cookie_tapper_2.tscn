@@ -1,31 +1,31 @@
-[gd_scene load_steps=28 format=3 uid="uid://d0qp28wbe5gv1"]
+[gd_scene load_steps=28 format=3 uid="uid://d2jt3f3nf3eym"]
 
-[ext_resource type="Script" path="res://CookieTapper9.gd" id="1_pa01o"]
-[ext_resource type="Texture2D" uid="uid://dknmg0y7g8fvb" path="res://assets/Final/cookie.png" id="2_6kenh"]
-[ext_resource type="Texture2D" uid="uid://dpds73tedjud5" path="res://assets/Final/cursor.png" id="3_ha6uw"]
-[ext_resource type="Texture2D" uid="uid://bq2ae11kkw3we" path="res://assets/Final/Grandma.png" id="4_qq0cl"]
-[ext_resource type="Texture2D" uid="uid://mrped7c8f6f4" path="res://assets/Final/Farm.png" id="5_vxg07"]
-[ext_resource type="Texture2D" uid="uid://p533qgf17k7b" path="res://assets/Final/Mine.png" id="6_ol5nd"]
-[ext_resource type="Texture2D" uid="uid://dg2koyuqlyti8" path="res://assets/Final/Factory.png" id="7_qnrcx"]
-[ext_resource type="Texture2D" uid="uid://5pwmis2qn45b" path="res://assets/Final/Bank.png" id="8_sl42r"]
-[ext_resource type="Texture2D" uid="uid://cw7n6vkn2xlv6" path="res://assets/Final/Temple.png" id="9_4yu2h"]
-[ext_resource type="Texture2D" uid="uid://bgubxm8x00x0p" path="res://assets/Final/Wizard Tower.png" id="10_s3n0f"]
-[ext_resource type="Texture2D" uid="uid://drnaxppm2w2t6" path="res://assets/Final/Shipment.png" id="11_pj23u"]
-[ext_resource type="Texture2D" uid="uid://m5ic3p6y47bd" path="res://assets/Final/Alchemy Lab.png" id="12_q2i22"]
-[ext_resource type="Texture2D" uid="uid://dkcd36ojgeiw7" path="res://assets/Final/Portal.png" id="13_83oma"]
-[ext_resource type="Texture2D" uid="uid://cgxi0577us4vo" path="res://assets/Final/Time machine.png" id="14_htfo8"]
-[ext_resource type="Texture2D" uid="uid://dxeor00ikmsum" path="res://assets/Final/Anti Matter.png" id="15_i44ym"]
-[ext_resource type="Texture2D" uid="uid://dxw2d0wlx6nba" path="res://assets/Final/Prism.png" id="16_5e1v4"]
-[ext_resource type="AudioStream" uid="uid://vdqchyv723s4" path="res://assets/Final/New_Project.mp3" id="17_l2r1r"]
-[ext_resource type="Texture2D" uid="uid://bt15e57mo3l0e" path="res://assets/Final/Background 9.png" id="18_xda6w"]
+[ext_resource type="Script" path="res://assets/Final/cookie_tapper_2.gd" id="1_e26iw"]
+[ext_resource type="Texture2D" uid="uid://dknmg0y7g8fvb" path="res://assets/Final/cookie.png" id="2_1ukwr"]
+[ext_resource type="Texture2D" uid="uid://dpds73tedjud5" path="res://assets/Final/cursor.png" id="3_f1pa6"]
+[ext_resource type="Texture2D" uid="uid://bq2ae11kkw3we" path="res://assets/Final/Grandma.png" id="4_i5f2e"]
+[ext_resource type="Texture2D" uid="uid://mrped7c8f6f4" path="res://assets/Final/Farm.png" id="5_d0qy7"]
+[ext_resource type="Texture2D" uid="uid://p533qgf17k7b" path="res://assets/Final/Mine.png" id="6_rgk00"]
+[ext_resource type="Texture2D" uid="uid://dg2koyuqlyti8" path="res://assets/Final/Factory.png" id="7_rcgmw"]
+[ext_resource type="Texture2D" uid="uid://5pwmis2qn45b" path="res://assets/Final/Bank.png" id="8_kfve0"]
+[ext_resource type="Texture2D" uid="uid://cw7n6vkn2xlv6" path="res://assets/Final/Temple.png" id="9_mgdxa"]
+[ext_resource type="Texture2D" uid="uid://bgubxm8x00x0p" path="res://assets/Final/Wizard Tower.png" id="10_r14ue"]
+[ext_resource type="Texture2D" uid="uid://drnaxppm2w2t6" path="res://assets/Final/Shipment.png" id="11_28wa5"]
+[ext_resource type="Texture2D" uid="uid://m5ic3p6y47bd" path="res://assets/Final/Alchemy Lab.png" id="12_x3rcv"]
+[ext_resource type="Texture2D" uid="uid://dkcd36ojgeiw7" path="res://assets/Final/Portal.png" id="13_b5gqo"]
+[ext_resource type="Texture2D" uid="uid://cgxi0577us4vo" path="res://assets/Final/Time machine.png" id="14_qyfo5"]
+[ext_resource type="Texture2D" uid="uid://dxeor00ikmsum" path="res://assets/Final/Anti Matter.png" id="15_r04jc"]
+[ext_resource type="Texture2D" uid="uid://dxw2d0wlx6nba" path="res://assets/Final/Prism.png" id="16_woyp1"]
+[ext_resource type="AudioStream" uid="uid://vdqchyv723s4" path="res://assets/Final/New_Project.mp3" id="17_2o7ij"]
+[ext_resource type="Texture2D" uid="uid://cqyw45gqe5aip" path="res://assets/Final/Background 2.png" id="18_dlrrt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fsgdr"]
 font_size = 32
-font_color = Color(1, 0.368627, 0.12549, 0.996078)
+font_color = Color(0.286275, 0, 0.415686, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_uvc8t"]
 font_size = 112
-font_color = Color(1, 0.368627, 0.12549, 0.996078)
+font_color = Color(0.286275, 0, 0.415686, 1)
 
 [sub_resource type="Theme" id="Theme_j52of"]
 default_font_size = 112
@@ -35,7 +35,7 @@ font_size = 111
 
 [sub_resource type="LabelSettings" id="LabelSettings_imeh2"]
 font_size = 36
-font_color = Color(1, 0.368627, 0.12549, 0.996078)
+font_color = Color(0.286275, 0, 0.415686, 1)
 
 [sub_resource type="Theme" id="Theme_qxx7u"]
 default_font_size = 30
@@ -49,16 +49,16 @@ font_size = 36
 [sub_resource type="LabelSettings" id="LabelSettings_kk5in"]
 font_size = 41
 
-[node name="CookieTapper9" type="Node2D"]
+[node name="CookieTapper2" type="Node2D"]
 position = Vector2(4, 0)
-script = ExtResource("1_pa01o")
+script = ExtResource("1_e26iw")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 6.0
 offset_top = -11.0
 offset_right = 286.0
 offset_bottom = 59.0
-text = "Your 9th Bakery!
+text = "Your 2nd Bakery!
 "
 label_settings = SubResource("LabelSettings_fsgdr")
 horizontal_alignment = 1
@@ -68,7 +68,7 @@ metadata/_edit_use_anchors_ = true
 [node name="BigCookie" type="Sprite2D" parent="."]
 position = Vector2(122, 175)
 scale = Vector2(0.274687, 0.250156)
-texture = ExtResource("2_6kenh")
+texture = ExtResource("2_1ukwr")
 
 [node name="lblCookies" type="Label" parent="BigCookie"]
 offset_left = -316.724
@@ -95,7 +95,7 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(822, 61)
 scale = Vector2(0.227728, 0.219727)
-texture = ExtResource("3_ha6uw")
+texture = ExtResource("3_f1pa6")
 
 [node name="BuyCursor" type="Button" parent="BigCursor"]
 offset_left = 553.291
@@ -121,17 +121,14 @@ offset_left = 406.0
 offset_top = 3.0
 offset_right = 618.0
 offset_bottom = 63.0
-text = "Rebirths: 8"
+text = "Rebirths: 1"
 label_settings = SubResource("LabelSettings_imeh2")
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Buyrebirth" type="Button" parent="lblrebirth"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.113208
-anchor_right = 0.264151
+layout_mode = 0
 offset_left = -14.0
 offset_top = 54.0
 offset_right = 209.0
@@ -140,15 +137,12 @@ theme = SubResource("Theme_qxx7u")
 metadata/_edit_use_anchors_ = true
 
 [node name="costR" type="Label" parent="lblrebirth"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.0330189
-anchor_right = -0.0330189
+layout_mode = 0
 offset_left = -32.0
 offset_top = 51.0
 offset_right = 229.0
 offset_bottom = 99.0
-text = "Cookies: 1600000000000"
+text = "Cookies: 10000000"
 label_settings = SubResource("LabelSettings_0p5jx")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -158,19 +152,19 @@ metadata/_edit_use_anchors_ = true
 visible = false
 position = Vector2(864, 65)
 scale = Vector2(0.649369, 0.648758)
-texture = ExtResource("4_qq0cl")
+texture = ExtResource("4_i5f2e")
 
 [node name="BuyGrandmas" type="Button" parent="Grandma"]
-offset_left = 121.657
-offset_top = -46.2422
-offset_right = 434.657
-offset_bottom = 47.7578
+offset_left = 136.0
+offset_top = -26.0
+offset_right = 442.0
+offset_bottom = 68.0
 
 [node name="costG" type="Label" parent="Grandma"]
-offset_left = 122.0
-offset_top = -34.0
-offset_right = 427.0
-offset_bottom = 47.0
+offset_left = 137.056
+offset_top = -16.9555
+offset_right = 442.056
+offset_bottom = 64.0445
 text = "Cost: 100 Cookies"
 label_settings = SubResource("LabelSettings_e8ekr")
 horizontal_alignment = 1
@@ -178,9 +172,9 @@ vertical_alignment = 1
 
 [node name="Farm" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(892, 57)
+position = Vector2(862, 66)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("5_vxg07")
+texture = ExtResource("5_d0qy7")
 
 [node name="BuyFarm" type="Button" parent="Farm"]
 anchors_preset = 2
@@ -204,9 +198,9 @@ vertical_alignment = 1
 
 [node name="Mine" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(896, 59)
+position = Vector2(853, 78)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("6_ol5nd")
+texture = ExtResource("6_rgk00")
 
 [node name="BuyMine" type="Button" parent="Mine"]
 anchors_preset = 2
@@ -230,9 +224,9 @@ vertical_alignment = 1
 
 [node name="Factory" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(873, 50)
+position = Vector2(856, 76)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("7_qnrcx")
+texture = ExtResource("7_rcgmw")
 
 [node name="BuyFactory" type="Button" parent="Factory"]
 anchors_preset = 2
@@ -256,9 +250,9 @@ vertical_alignment = 1
 
 [node name="Bank" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(896, 59)
+position = Vector2(853, 70)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("8_sl42r")
+texture = ExtResource("8_kfve0")
 
 [node name="BuyBank" type="Button" parent="Bank"]
 anchors_preset = 2
@@ -284,7 +278,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(896, 59)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("9_4yu2h")
+texture = ExtResource("9_mgdxa")
 
 [node name="BuyTemple" type="Button" parent="Temple"]
 anchors_preset = 2
@@ -310,7 +304,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(896, 63.1244)
 scale = Vector2(0.415556, 0.471292)
-texture = ExtResource("10_s3n0f")
+texture = ExtResource("10_r14ue")
 
 [node name="BuyWTower" type="Button" parent="WTower"]
 anchors_preset = 2
@@ -336,7 +330,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(838, 65)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("11_pj23u")
+texture = ExtResource("11_28wa5")
 
 [node name="BuyShipment" type="Button" parent="Shipment"]
 anchors_preset = 2
@@ -362,7 +356,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(844, 47)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("12_q2i22")
+texture = ExtResource("12_x3rcv")
 
 [node name="BuyAlchemy" type="Button" parent="Alchemy"]
 anchors_preset = 2
@@ -388,7 +382,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(858, 51)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("13_83oma")
+texture = ExtResource("13_b5gqo")
 
 [node name="BuyPortal" type="Button" parent="Portal"]
 anchors_preset = 2
@@ -414,7 +408,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(796, 53)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("14_htfo8")
+texture = ExtResource("14_qyfo5")
 
 [node name="BuyTimeMachine" type="Button" parent="TimeMachine"]
 anchors_preset = 2
@@ -440,7 +434,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(816, 47)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("15_i44ym")
+texture = ExtResource("15_r04jc")
 
 [node name="BuyAntiMatter" type="Button" parent="AntiMatter"]
 anchors_preset = 2
@@ -466,7 +460,7 @@ vertical_alignment = 1
 visible = false
 position = Vector2(790, 51)
 scale = Vector2(0.415556, 0.415556)
-texture = ExtResource("16_5e1v4")
+texture = ExtResource("16_woyp1")
 
 [node name="BuyPrism" type="Button" parent="Prism"]
 anchors_preset = 2
@@ -489,21 +483,23 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("17_l2r1r")
+stream = ExtResource("17_2o7ij")
 autoplay = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 show_behind_parent = true
+offset_top = -3.0
 offset_right = 1150.0
-offset_bottom = 646.0
+offset_bottom = 643.0
 mouse_filter = 2
-texture = ExtResource("18_xda6w")
+texture = ExtResource("18_dlrrt")
 
 [node name="Panel" type="Panel" parent="."]
 show_behind_parent = true
-offset_left = -6.0
-offset_right = 1149.0
-offset_bottom = 116.0
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 114.0
 mouse_filter = 2
 
 [connection signal="pressed" from="BigCookie/CookieTapped" to="." method="_on_cookie_clicked_pressed" flags=18]
@@ -513,54 +509,54 @@ mouse_filter = 2
 [connection signal="pressed" from="Grandma/BuyGrandmas" to="." method="_on_buy_grandmas_pressed" flags=18]
 [connection signal="pressed" from="Farm/BuyFarm" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Farm/BuyFarm" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Mine/BuyMine" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Mine/BuyMine" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="Mine/BuyMine" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Mine/BuyMine" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_factory_pressed" flags=18]
 [connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Factory/BuyFactory" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_bank_pressed" flags=18]
 [connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_bank_pressed" flags=18]
+[connection signal="pressed" from="Bank/BuyBank" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Bank/BuyBank" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Temple/BuyTemple" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_w_tower_pressed" flags=18]
-[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_w_tower_pressed" flags=18]
+[connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="WTower/BuyWTower" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_shipment_pressed" flags=18]
 [connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_buy_temple_pressed" flags=18]
 [connection signal="pressed" from="Shipment/BuyShipment" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_alchemy_pressed" flags=18]
+[connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Alchemy/BuyAlchemy" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_portal_pressed" flags=18]
-[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_farm_pressed" flags=18]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_portal_pressed" flags=18]
+[connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="Portal/BuyPortal" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_time_machine_pressed" flags=18]
 [connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_buy_temple_pressed" flags=18]
 [connection signal="pressed" from="TimeMachine/BuyTimeMachine" to="." method="_on_button_pressed" flags=18]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_mine_pressed" flags=18]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_temple_pressed" flags=18]
 [connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_anti_matter_pressed" flags=18]
-[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_buy_mine_pressed" flags=18]
 [connection signal="pressed" from="AntiMatter/BuyAntiMatter" to="." method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_temple_pressed" flags=18]
+[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_farm_pressed" flags=18]
 [connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_prism_pressed" flags=18]
 [connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_mine_pressed" flags=18]
-[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_farm_pressed" flags=18]
-[connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_buy_temple_pressed" flags=18]
 [connection signal="pressed" from="Prism/BuyPrism" to="." method="_on_button_pressed" flags=18]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished" flags=18]

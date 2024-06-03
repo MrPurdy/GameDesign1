@@ -3,8 +3,8 @@ extends Node2D
 
 
 func _on_buyrebirth_pressed():
-	if cookies >= 30000000:
-		get_tree().change_scene_to_file("res://cookie_tapper_4.tscn")
+	if cookies >= 50000000000:
+		get_tree().change_scene_to_file("res://assets/Final/cookie_tapper_7.tscn")
 	
 var costPM = 21000000000000
 var costAM = 1700000000000
@@ -35,7 +35,7 @@ var farms = 0
 var grandmas = 0
 var cursors = 0
 var cookies = 0
-var rebirths = 2
+var rebirths = 5
 
 func _click():
 	call_deferred("do_a_left_click")
@@ -50,35 +50,35 @@ func do_a_left_click():
 	
 
 func _on_cookie_clicked_pressed():
-	cookies += 4.0
+	cookies += 64.0
 	if cursors > 0:
-		cookies += 4
+		cookies += 64
 	if grandmas > 0:
-		cookies += 40
+		cookies += 640
 	if farms > 0:
-		cookies += 320
+		cookies += 5120
 	if mines > 0:
-		cookies += 1880
+		cookies += 30080
 	if factorys > 0:
-		cookies += 10400
+		cookies += 166400
 	if banks > 0:
-		cookies += 56000
+		cookies += 896000
 	if temples > 0:
-		cookies += 312000
+		cookies += 4992000
 	if wizardtowers > 0:
-		cookies += 1760000
+		cookies += 28160000
 	if shipments > 0:
-		cookies += 10400000
+		cookies += 166400000
 	if alchemylabs > 0:
-		cookies += 64000000
+		cookies += 1024000000
 	if portals > 0:
-		cookies += 400000000
+		cookies += 6400000000
 	if timemachines > 0:
-		cookies += 2600000000
+		cookies += 41600000000
 	if antimatters > 0:
-		cookies += 17200000000
+		cookies += 275200000000
 	if prisms > 0:
-		cookies += 116000000000
+		cookies += 1856000000000
 	
 	$BigCookie/lblCookies.text = str(round(cookies)) + " Cookies"
 	if cookies >= 15:
@@ -129,11 +129,11 @@ func _on_cookie_clicked_pressed():
 		$TimeMachine.visible = true
 	if timemachines >= 1:
 		$TimeMachine.visible = false
-	if cookies >= 17000000000000:
+	if cookies >= 5000000000000:
 		$AntiMatter.visible = true
 	if antimatters >= 1:
 		$AntiMatter.visible = false
-	if cookies >= 210000000000000:
+	if cookies >= 10000000000000:
 		$Prism.visible = true
 	if prisms >= 1:
 		$Prism.visible = false

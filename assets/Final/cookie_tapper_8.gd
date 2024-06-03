@@ -4,7 +4,7 @@ extends Node2D
 
 func _on_buyrebirth_pressed():
 	if cookies >= 500000000000:
-		get_tree().change_scene_to_file("res://cookie_tapper_2.tscn")
+		get_tree().change_scene_to_file("res://assets/Final/cookie_tapper_9.tscn")
 	
 var costPM = 21000000000000
 var costAM = 1700000000000

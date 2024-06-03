@@ -3,8 +3,8 @@ extends Node2D
 
 
 func _on_buyrebirth_pressed():
-	if cookies >= 1000000:
-		get_tree().change_scene_to_file("res://cookie_tapper_2.tscn")
+	if cookies >= 10000000000000:
+		get_tree().change_scene_to_file("res://assets/Final/the_end.tscn")
 	
 var costPM = 21000000000000
 var costAM = 1700000000000
@@ -35,13 +35,14 @@ var farms = 0
 var grandmas = 0
 var cursors = 0
 var cookies = 0
-var rebirths = 0
+var rebirths = 9
 
 func _click():
 	call_deferred("do_a_left_click")
 	
 func do_a_left_click():
 	var a = InputEventMouseButton.new()
+	@warning_ignore("int_as_enum_without_cast")
 	a.set_button_index(1)
 	a.position = Vector2(102.5, 150)
 	a.pressed = true
@@ -49,35 +50,35 @@ func do_a_left_click():
 	
 
 func _on_cookie_clicked_pressed():
-	cookies += 1.0
+	cookies += 1024.0
 	if cursors > 0:
-		cookies += 1
+		cookies += 1024
 	if grandmas > 0:
-		cookies += 10
+		cookies += 10240
 	if farms > 0:
-		cookies += 80
+		cookies += 81920
 	if mines > 0:
-		cookies += 470
+		cookies += 481280
 	if factorys > 0:
-		cookies += 2600
+		cookies += 2662400
 	if banks > 0:
-		cookies += 14000
+		cookies += 14336000
 	if temples > 0:
-		cookies += 78000
+		cookies += 79872000
 	if wizardtowers > 0:
-		cookies += 440000
+		cookies += 450560000
 	if shipments > 0:
-		cookies += 2600000
+		cookies += 2662400000
 	if alchemylabs > 0:
-		cookies += 16000000
+		cookies += 16392000000
 	if portals > 0:
-		cookies += 100000000
+		cookies += 102400000000
 	if timemachines > 0:
-		cookies += 650000000
+		cookies += 665600000000
 	if antimatters > 0:
-		cookies += 4300000000
+		cookies += 4403200000000
 	if prisms > 0:
-		cookies += 29000000000
+		cookies += 29680000000000
 	
 	$BigCookie/lblCookies.text = str(round(cookies)) + " Cookies"
 	if cookies >= 15:
@@ -128,11 +129,11 @@ func _on_cookie_clicked_pressed():
 		$TimeMachine.visible = true
 	if timemachines >= 1:
 		$TimeMachine.visible = false
-	if cookies >= 17000000000000:
+	if cookies >= 5000000000000:
 		$AntiMatter.visible = true
 	if antimatters >= 1:
 		$AntiMatter.visible = false
-	if cookies >= 210000000000000:
+	if cookies >= 10000000000000:
 		$Prism.visible = true
 	if prisms >= 1:
 		$Prism.visible = false
@@ -279,4 +280,3 @@ func _on_buy_prism_pressed():
 		
 func _on_audio_stream_player_finished():
 	$AudioStreamPlayer.play()
-

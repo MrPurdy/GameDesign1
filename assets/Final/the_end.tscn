@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=3 uid="uid://civifyrdvfnb2"]
 
-[ext_resource type="Script" path="res://the_end.gd" id="1_rdyam"]
-[ext_resource type="Texture2D" uid="uid://cb0peo42fiytk" path="res://assets/Final/Final.png" id="2_kq85s"]
-[ext_resource type="AudioStream" uid="uid://vdqchyv723s4" path="res://assets/Final/New_Project.mp3" id="3_df70p"]
+[ext_resource type="Script" path="res://assets/Final/the_end.gd" id="1_ilr0l"]
+[ext_resource type="Texture2D" uid="uid://cb0peo42fiytk" path="res://assets/Final/Final.png" id="2_kh0h0"]
+[ext_resource type="AudioStream" uid="uid://vdqchyv723s4" path="res://assets/Final/New_Project.mp3" id="3_a3moh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0gox5"]
 font_size = 63
@@ -48,7 +48,7 @@ default_font_size = 45
 
 [node name="TheEnd" type="Node2D"]
 position = Vector2(4, 0)
-script = ExtResource("1_rdyam")
+script = ExtResource("1_ilr0l")
 
 [node name="lblCongrat" type="Label" parent="."]
 offset_left = 58.0
@@ -68,10 +68,10 @@ offset_top = -2.0
 offset_right = 1152.0
 offset_bottom = 644.0
 mouse_filter = 2
-texture = ExtResource("2_kq85s")
+texture = ExtResource("2_kh0h0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_df70p")
+stream = ExtResource("3_a3moh")
 autoplay = true
 
 [node name="lblExplain" type="Label" parent="."]
